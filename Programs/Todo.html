@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("/Folder/images/flare.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+      #main-container {
+        width: 24rem;
+        height: 32rem;
+        padding: 1.875rem;
+        /* text-align: center; */
+        border: 2px solid #e6b7eca1;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 0.625rem;
+      }
+      h1 {
+        color: white;
+        font-family: Calibri;
+        margin-bottom: 1.875rem;
+        text-align: center;
+      }
+      #search-box {
+        border-radius: 1.875rem;
+        background: transparent;
+        border: 2px solid #e6b7eca1;
+        outline: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        /* padding: 8px; */
+        position: relative;
+        margin-bottom: 10px;
+        display: flex;
+        /* align-items: center; */
+        transition: width 0.4s ease-in-out;
+      }
+      #search-box i {
+        color: white;
+        font-size: 20px;
+        background: transparent;
+        border-radius: 20px;
+        width: 1.7rem;
+        height: 1.8rem;
+        text-align: center;
+        padding: 6px 0px 0px 8px;
+      }
+      #search-box, #input-search:hover {
+        width: 87%;
+      }
+      #input-search {
+        /* flex: 1; */
+        font-size: 1rem;
+        caret-color: white;
+        transition: width 0.4s ease-in-out;
+        color: white;
+        height: 2.2rem;
+        width:2rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        margin-left: 7px;
+        /* position: absolute; */
+      }
+      #input-container {
+        display: flex;
+        margin-bottom: 1.43rem;
+      }
+      #input-task {
+        background: transparent;
+        border-radius: 1.875rem;
+        border: 2px solid #e6b7eca1;
+        width: 17rem;
+        height: 2.4rem;
+        outline: none;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        caret-color: white;
+        color: white;
+      }
+      input::placeholder {
+        color: #bfbfbf;
+      }
+      #add {
+        background-color: #e6b7eca1;
+        color: white;
+        border-radius: 1.875rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: 2rem;
+        text-align: center;
+      }
+      #add:active {
+        transform: translateY(1px);
+      }
+      #buttons {
+        margin-bottom: 3.93rem;
+        /* margin-right: 50px; */
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        gap: 16px;
+      }
+      .btn {
+        background: transparent;
+        border-radius: 3.125rem;
+        border: 2px solid #e6b7eca1;
+        color: white;
+        width: 6rem;
+        height: 1.8rem;
+        cursor: pointer;
+        outline: none;
+        padding: 5px;
+      }
+      .btn:hover {
+        background-color: #503673;
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+      #task-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="heading">
+        <h1>Todo List</h1>
+      </div>
+      <div id="search-box">
+        <i id="icon" class="fa fa-search"></i>
+        <input type="text" id="input-search"/>
+      </div>
+      <div id="input-container">
+        <input id="input-task" type="text" placeholder="Add new task" />
+        <button id="add">
+          <i class="fa fa-plus-circle"></i>
+        </button>
+      </div>
+      <div id="buttons">
+        <button class="btn">Complete</button>
+        <button class="btn">Incomplete</button>
+        <button class="btn">Delete All</button>
+      </div>
+      <div id="task-container">
+        <img id="empty" src="images/empty.svg" alt="" />
+        <ul id="tasks"></ul>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

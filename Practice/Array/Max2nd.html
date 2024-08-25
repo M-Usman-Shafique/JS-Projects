@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let min2nd, max2nd = 0;
+      function MinMax2nd(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length - i - 1; j++) {
+            // -i for excluding the higher sorted elements at the end of the array.
+            if (arr[j] > arr[j + 1]) {
+              let temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        for (let i = arr.length - 1; i >= 0; i--) {
+          if (arr[i] !== arr[i - 1]) {
+            max2nd = arr[i - 1];
+            break;
+          }
+        }
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] !== arr[i + 1]) {
+            min2nd = arr[i + 1];
+            break;
+          }
+        }
+        return `2nd min= ${min2nd}, 2nd max= ${max2nd}`
+      }
+
+      const data = [3, 1, 5, 2, 0, 4];
+      const newData = MinMax2nd(data);
+      console.log(newData);
+    </script>
+  </body>
+</html>

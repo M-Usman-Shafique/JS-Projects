@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random</title>
+  </head>
+  <body>
+    <script>
+    // Generating Random Number within a Particular Range:
+      document.write(Math.round(Math.random() * (25 - 15) + 15));
+
+    // Generalization using function for any range:
+      function rand(min, max) {
+        document.write(Math.round(Math.random() * (max - min) + min));
+      }
+      rand(15, 20);
+      
+    // Fisher-Yates' Random Sort for any Array:
+      function shuff(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          let j = Math.round(Math.random() * i);
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        console.log(arr);
+      }
+      shuff(["Usman", "Noman", "Salman", "Farhan", "Rizwan"]);
+    </script>
+  </body>
+</html>

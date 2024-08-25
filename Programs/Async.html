@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async. Programming</title>
+  </head>
+  <body>
+    <script>
+
+      // ⁡⁣⁢⁣​‌‍‌‍Async. Programming in Sync. JavaScript:⁡​
+
+          function signUp() {
+            setTimeout(() => {
+              console.log("signUp");
+            }, 3000);
+          }
+
+          function login() {
+            setTimeout(() => {
+              console.log("login");
+            }, 2000);
+          }
+
+          function getData() {
+            setTimeout(() => {
+              console.log("getData");
+            }, 1000);
+          }
+
+          function updateData() {
+            console.log("updateData  ");
+          }
+
+          signUp();
+          login();
+          getData();
+          updateData();
+
+          // ​‌‍‌⁡⁣⁢⁣Callbacks:⁡​
+
+          // function signUp(callback) {
+          //   setTimeout(() => {
+          //     console.log("SignUp");
+          //     callback();
+          //   }, 3000);
+          // }
+
+          // function login(callback) {
+          //   setTimeout(() => {
+          //     console.log("Login");
+          //     callback();
+          //   }, 2000);
+          // }
+
+          // function getData(callback ) {
+          //   setTimeout(() => {
+          //     console.log("getData");
+          //     callback();
+          //   }, 1000);
+          // }
+
+          // function updateData(callback) {
+          //   console.log("UpdateData");
+          //   callback();
+          // }
+
+          // signUp(() => {
+          //   login(() => {
+          //     getData(() => {
+          //       updateData(()=> {
+          //       console.log("All tasks are finished.");
+          //       });
+          //     });
+          //   });
+          // });
+
+          // ⁡⁢⁣⁢​‌‍‌Callback Hell:​⁡
+
+          // function signUp(callback) {
+          //   setTimeout(() => {
+          //     console.log("SignUp");
+          //     // callback(null, 10);
+          //     callback(new Error("Error#1"), 10); // error & result
+          //   }, 3000);
+          // }
+
+          // function login(callback) {
+          //   setTimeout(() => {
+          //     console.log("Login");
+          //     callback(null, 12);
+          //     // callback(new Error("Error#2"), 12);
+          //   }, 2000);
+          // }
+
+          // function getData(callback) {
+          //   setTimeout(() => {
+          //     console.log("getData");
+          //     callback(null, 15);
+          //     // callback(new Error("Error#3"), 15);
+          //   }, 1000);
+          // }
+
+          // function updateData(callback) {
+          //   console.log("UpdateData");
+          //   callback(null, 18);
+          //   // callback(new Error("Error#4"), 18);
+          // }
+
+          // signUp((error, result) => {
+          //   if (!error) {
+          //     login(() => {
+          //       if (!error) {
+          //         getData(() => {
+          //           if (!error) {
+          //             updateData(() => {
+          //               if (!error) {
+          //                 console.log("All tasks are finished.");
+          //               } else {
+          //                 console.error(error.message);
+          //               }
+          //             });
+          //           } else {
+          //             console.error(error.message);
+          //           }
+          //         });
+          //       } else {
+          //         console.error(error.message);
+          //       }
+          //     });
+          //   } else {
+          //     console.error(error.message); // message is a built-in property.
+          //   }
+          // });
+
+          // ⁡⁣⁢⁣​‌‍‌Promises:​⁡
+
+        // function signUp() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("SignUp");
+        //       resolve();
+        //       // reject(new Error("SignUp failed."));
+        //     }, 3000);
+        //   });
+        // }
+
+        // function login() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("Login");
+        //       resolve();
+        //       // reject(new Error("Login failed."));
+        //     }, 2000);
+        //   });
+        // }
+
+        // function getData() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("getData");
+        //       resolve();
+        //       // reject(new Error("getData not fulfilled."));
+        //     }, 1000);
+        //   });
+        // }
+        // function updateData() {
+        //   return new Promise((resolve, reject) => {
+        //     console.log("UpdateData");
+        //     resolve("All tasks are finished.");
+        //     // reject(new Error("UpdateData not fulfilled."));
+        //   });
+        // }
+
+        // signUp()
+        //   .then(login)
+        //   .then(getData)
+        //   .then(updateData)
+        //   .then((result) => console.log(result))
+        //   .catch((error) => console.error(error.message));
+
+        // ⁡⁢⁣⁢​‌‍‌Promise Chaining​⁡.
+
+        // ⁡⁣⁢⁣​‌‍‌Async. Await:​⁡
+
+        // function signUp() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("SignUp");
+        //       resolve();
+        //       // reject(new Error("SignUp failed."))
+        //     }, 3000);
+        //   });
+        // }
+
+        // function login() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("Login");
+        //       resolve();
+        //       // reject(new Error("Login failed."));
+        //     }, 2000);
+        //   });
+        // }
+
+        // function getData() {
+        //   return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //       console.log("Get Data");
+        //       resolve();
+        //       // reject(new Error("getData not fulfilled."))
+        //     }, 1000);
+        //   });
+        // }
+        // function updateData() {
+        //   return new Promise((resolve, reject) => {
+        //     console.log("Update Data");
+        //     resolve("All tasks are finished finished.");
+        //     // reject(new Error("Update not fulfilled."))
+        //   });
+        // }
+
+        // async function AsyncAwait() {
+        //   try {
+        //     await signUp();
+        //     await login();
+        //     await getData();
+        //     let message = await updateData();
+        //     console.log(message);
+        //   } catch(error) {
+        //     console.error(error.message);
+        //   }
+        // }
+        // AsyncAwait();
+    </script>
+  </body>
+</html>

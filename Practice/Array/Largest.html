@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2nd Largest</title>
+  </head>
+  <body>
+    <script>
+
+      // ​‌‍‌⁡⁣⁢⁣Finding Largest Using Quick Sor​‌‍‌⁡⁣⁢⁣t:⁡​
+
+      function largest(arr) {
+        arr.sort((a,b) => (b-a));
+        let set = new Set(arr);     // to avoid repeating elements.
+        let ary = [... set];       // converting set back to array.
+        let nums = ary[1];        // 2nd largest element of array.
+        console.log(nums);
+      }
+      // largest([4, 15, 2, 2, 2, 4, 6, 27, 4]);
+      
+
+      // ​‌‍‌‍⁡⁣⁢⁣Finding Largest Using Bubble Sor‍⁡⁣⁢⁣t:⁡​
+
+      function sort(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[j] < arr[j + 1]) {   // Compare & Swap...
+              let temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        console.log(arr);
+
+        
+        let largest = arr[0];    // Finding 3rd Largest...
+        let second = arr[1];
+        let third = arr[2];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] !== largest && arr[i] !== second) {
+            third = arr[i];
+            break;
+          }
+        }
+        console.log(third);
+      }
+      sort([3, 13, 5, 7, 13, 1, 4, 2, -2, -1, 0, 9, 6, 13]);
+      sort(["f", "t", "s", "b", "t", "a", "r", "t"]);
+    </script>
+  </body>
+</html>

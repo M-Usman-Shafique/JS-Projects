@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Slice</title>
+  </head>
+  <body>
+    <script>
+    function sliced(input, length) {
+        if (input.constructor === String && length > 0) {
+          return input.slice(0, length);
+        }
+      }
+      console.log(sliced("Robin Singh", 4));
+    </script>
+  </body>
+</html>

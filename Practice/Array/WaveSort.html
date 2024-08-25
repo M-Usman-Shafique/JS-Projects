@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function waveSort(arr) {
+        arr.sort((a, b) => a - b);
+        for (let i = 0; i < arr.length; i += 2) {
+          let temp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = temp;
+        }
+        return arr;
+      }
+
+      const data = [3, 1, 5, 1, 2, 0, 4, 2];
+      const newData = waveSort(data);
+      console.log(newData);
+    </script>
+  </body>
+</html>

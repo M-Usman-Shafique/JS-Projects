@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Figma</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        font-family: Tahoma;
+      }
+      .main_content {
+      margin-left: 6vw;
+      }
+      .navbar {
+      border-radius: 3px;
+      /* position: fixed;
+      top: 0;
+      width: 100%; */
+      padding: 10px;
+      display: flex;
+      justify-content:space-between;
+        /* margin-bottom: 80px; */
+      }
+      .left, .right, .center {
+        list-style-type: none;
+        display: flex;
+        align-items:center;
+      }
+      .left li a {
+        color: #717dab;
+        font-size: 17px;
+        text-decoration: none;
+        margin-left: 60px;
+      }
+      .right {
+      text-align: right;
+      }
+      .center {
+      font-size: 28px;
+      font-weight:900;
+    }
+    .center a {
+        text-decoration: none;
+        color: #222f65;
+    }
+    #navbutton {
+      background-color: #222f65;
+      border: none;
+      text-decoration: none;
+      width: 140px;
+      height: 24px;
+      border-radius: 2px;
+      margin-right: 100px;
+      cursor: pointer;
+    }
+    #navbutton a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-between;
+      }
+      .container1 {
+        width: 455px;
+        height: 350px;
+      }
+      .Heading1 {
+        font-size: 25px;
+        width: 450px;
+        height: 120px;
+      }
+      .Para1 {
+        font-size: 18px;
+        color: #222f65;
+        width: 450px;
+        height: 150px;
+        margin-bottom: 40px;
+      }
+      .container2 {
+        width: 450px;
+        height: 320px;
+        align-self: last baseline;
+      }
+      .Heading2 {
+        font-size: 22px;
+        width: 450px;
+        height: 50px;
+      }
+      .Para2 {
+        color: #222f65;
+        font-size: 16px;
+        width: 450px;
+        height: 150px;  
+      }
+      .Title {
+        color: #222f65;
+        width: 450px;
+        height: 120px;
+        display: flex;
+        justify-content:space-between;
+      }
+      .container3 {
+        width: 550px;
+        height: 200px;
+        align-self: center;
+      }
+      .Para5 {
+        color: #222f65;
+        font-size: 17px;
+        width: 450px;
+        height: 130px;
+      }
+      .Para6 {
+      color: #222f65;
+      width: 600px;
+      height: 70px;
+      margin: auto;
+      }
+      .text_font {
+      font-size: 32px;
+      margin-bottom: 20px;
+      }
+      .container4 {
+      width: 450px;
+      height: 220px;
+      align-self: center;
+      }
+      .sect {
+      background-color: #f2f5ff;
+      margin-top: 250px;
+      height: 700px;
+      padding-top: 200px;
+      display: block;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      }
+      button {
+        background-color: #222f65;
+        border: none;
+        text-decoration: none;
+        width: 175px;
+        height: 30px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .buy1 a {
+        color: white;
+        text-decoration: none;
+      }
+      .buy2 {
+      width: 140px;
+        height: 30px;
+      }
+      .buy2 a {
+      color: white;
+        text-decoration: none;
+      }
+      .buy3 {
+       width: 109px;
+        height: 26px;
+      }
+      .buy3 a {
+      color: white;
+      text-decoration: none;
+      }
+      .learn {
+        background-color: transparent;
+        border: 2px solid #222f65;
+      }
+      .learn a {
+        text-decoration: none;
+        color: #222f65;
+      }
+       footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    }
+      .foot {
+      width: 935px;
+      }
+       .foot a {
+        color: #929ecc;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 20px;
+      }
+      .social_icon {
+      width: 210px;
+      display: flex;
+      justify-content: space-between;
+}
+      .social_icon a {
+       color: #b0b8bc;
+       text-decoration: none;
+       font-size: 20px;
+}
+.foot-back {
+background-color: #e7ecff;
+margin-left: 0px;
+height: 230px;
+padding-top: 60px;
+}
+    </style>
+  </head>
+  <body>
+  <div>
+      <nav class="navbar">
+      <ul class="left">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <ul class="center">
+        <li><a href="#">Landing</a></li>
+      </ul>
+      <ul class="right">
+      <button id="navbutton"><a href="#">Buy Now</a></button></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main_content">
+    <section style="margin-top: 23vh;">
+      <div class="container1">
+      <div class="Heading1">
+        <h1>Introduce Your Product<br />Quickly & Effectively</h1>
+      </div>
+      <div class="Para1">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim.
+        </p>
+      </div>
+      <div>
+        <button class="buy1"><a href="#">Purchase UI Kit</a></button>
+        <button class="learn"><a href="#">Learn more</a></button>
+      </div>
+      </div>
+      <div class="image">
+        <img src="images/Group.png" alt="not available" />
+        </div>
+    </section>
+    <section>
+      <div class="container2">
+        <div class="Heading2">
+          <h2>Light, Fast & Powerful</h2>
+        </div>
+        <div class="Para2">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div>
+        <div class="Title">
+          <div>
+        <img src="images/tiny.png" alt="logo">
+        <h3 style="font-size: 16px;">Title Goes Here</h3> <br>
+        <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      </div>
+      <div>
+        <img src="images/tiny.png" alt="logo">
+        <h3 style="font-size: 16px;">Title Goes Here</h3> <br>
+        <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>  
+      </div>
+      </div>
+      </div>
+      <div id="mobile">
+        <img src="images/mobile.png" alt="not available" />
+      </div>
+    </section>
+    <section style="margin-top: 25vh;">
+      <div>
+        <img src="images/news.png" alt="not available">
+      </div>
+      <div class="container3">
+        <div class="Heading2">
+          <h2>Light, Fast & Powerful</h2>
+        </div>
+        <div class="Para2">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div> 
+      </div>
+    </section>
+    <section style="margin-top: 17vh;">
+      <div>
+        <img src="images/triangle.png" alt="not available">
+      </div>
+      <div class="container3">
+        <div class="Heading2">
+          <h2>Light, Fast & Powerful</h2>
+        </div>
+        <div class="Para2">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div> 
+      </div>
+    </section>
+    <section style="margin-top: 19vh;">
+      <div id="press">
+        <img src="images/press.png" alt="not available">
+      </div>
+      <div class="container4">
+        <div class="Heading2">
+          <h2>Light, Fast & Powerful</h2>
+        </div>
+        <div class="Para5">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div>
+        <div>
+          <button class="buy2"><a href="#">Purchase Now</a></button> 
+        </div>
+      </div>
+    </section>
+    </div>
+    <section class="sect">
+    <h1 style="font-size: 32px; margin-bottom: 22px;">A Price To Suit Everyone</h1>
+    <div class="Para6">
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut recusandae fuga ex ipsum voluptatibus iste unde temporibus cum omnis, aliquam ipsam, a, facilis commodi officia itaque libero est iusto ducimus. </p>
+    </div> <br>
+    <h1 style="color: #222f65; font-size: 50px; font-family: sans-serif; margin: 4px 0px 4px 0px;">$40</h1>
+    <h4 style="color: #222f65; font-size: 18px; margin-bottom: 44px;">UI Design Kit</h4>
+    <p style="color: #5d6970; font-size: 15px; margin-bottom: 7px;">See, One Price. Simple.</p>
+    <button class="buy1"><a href="#">Purchase Now</a></button>
+    </section>
+    <div class="foot-back">
+    <section style="padding-left: 5vw; padding-right: 5vw">
+    <p style="color: #939ea4; font-size: 14px;">&#169; 2020 Company</p>
+    <h1 style="color: #222f65; font-size: 26px; font-weight:900px;">Landing</h1>
+     <button class="buy3"><a href="#">Purchase Now</a></button> 
+    </section> <br><br>
+    <hr style="border-top: 1px solid #b0b8bc;"><br>
+    <footer>
+    <div class="foot">
+    <a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a>
+    </div>
+    <div class="social_icon">
+    <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-square-facebook"></i>
+    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i>
+    </div>
+    </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/1db7473b7d.js" crossorigin="anonymous"></script>
+  </body>
+</html>

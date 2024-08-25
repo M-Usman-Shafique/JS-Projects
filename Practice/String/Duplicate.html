@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let duplicates = [];
+      function duplicate(str) {
+        for (let i = 0; i < str.length - 1; i++) {
+          if (str[i] === str[i + 1]) {
+            duplicates.push(str[i]);
+          }
+        }
+        return duplicates;
+      }
+
+      const star = "Helloo";
+      console.log(duplicate(star));
+    </script>
+  </body>
+</html>

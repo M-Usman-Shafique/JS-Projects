@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Counter</title>
+    <style>
+      body {
+        padding: 50px 100px;
+        font-family: Calibri;
+      }
+      #heading {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        background-color: steelblue;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        margin: 0px;
+        text-align: center;
+        width: 68.4%;
+        color: white;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+      #box {
+        width: 60.5%;
+        height: 300px;
+        border-color: steelblue;
+        border-left: 50px solid steelblue;
+        border-right: 50px solid steelblue;
+        font-size: 20px;
+        margin: 0px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0);
+      }
+      #count {
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        width: 68.4%;
+        text-align: center;
+        background-color: steelblue;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 10px;
+        margin: 0px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Counter</h1>
+    </div>
+    <div id="container">
+      <textarea id="box" cols="30" rows="10"></textarea>
+    </div>
+    <div id="count">
+      <p>
+        <span id="word">0</span> Words & <span id="char">0</span> Characters
+      </p>
+    </div>
+    <script>
+      let box = document.getElementById("box");
+      box.addEventListener("input", function () {
+        let text = this.value;
+        let char = text.length;
+        document.getElementById("char").innerHTML = char;
+        text = text.trim(); // to remove extra spaces from start & end of text.
+        var words = text.split(" "); // split words on the basis of spaces to count.
+        let cleanWords = words.filter(function (elm) {
+          return elm != ""; // to remove extra space between words.
+        });
+        document.getElementById("word").innerHTML = cleanWords.length;
+       console.log(cleanWords);
+      });
+    </script>
+  </body>
+</html>

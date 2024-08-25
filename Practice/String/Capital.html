@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalize</title>
+  </head>
+  <body>
+    <script>
+
+      // ⁡⁣⁢⁡⁣⁢⁣​‌‍‌Capitalizing A Specific Letter of String:​⁡
+
+      // function capital(str) {
+      //   return str.slice(0, 4) + str.charAt(4).toUpperCase() + str.slice(5);
+      // }
+      // console.log(capital("the american people"));
+
+      // ⁡⁣⁢⁡⁣⁢⁡⁣⁢⁣​‌‍‌Capitalizing 1st letter of Each Word:​⁡
+
+      function caps(str) {
+        let words = str.split(" ");
+        for (let x in words) {
+          words[x] = words[x].charAt(0).toUpperCase() + words[x].slice(1);
+        }
+        return words.join(" ");
+      }
+
+      const str = "the brave new world";
+      console.log(caps(str));
+    </script>
+  </body>
+</html>

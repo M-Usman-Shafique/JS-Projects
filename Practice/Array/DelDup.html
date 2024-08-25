@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      //  Removing Duplicates:
+      function delDuplicates(arr) {
+        arr.sort((a, b) => (a - b));
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === arr[i + 1]) {
+            arr.splice(i, 1);
+            i--;    // To bring the loop back because after removing an element, the next element shifts to the current index.
+          }
+        }
+        return arr;
+      }
+
+      const arr = [0, 5, 2, 1, 0, 1, 2, 3, 4, 3, 2, 4];
+      console.log(delDuplicates(arr));
+    </script>
+  </body>
+</html>

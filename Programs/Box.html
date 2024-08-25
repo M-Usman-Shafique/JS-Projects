@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        width: 100%;
+        height: 100;
+      }
+      #box {
+        margin: 0;
+        padding: 0;
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+      var a = 0;
+      var b = 0;
+      setInterval(myAnim, 80);
+      function myAnim() {
+        a = a + 25;
+        b = b + 10;
+        let target = document.getElementById("box");
+        target.style.marginLeft = a + "px";
+        target.style.marginTop = b + "px";
+      }
+    </script>
+  </body>
+</html>

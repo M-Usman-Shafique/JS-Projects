@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Template</title>
+    <style>
+      body {
+  background-image: url("/images/Blur.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+    .margin {
+    justify-content: center;
+  } 
+  h2, h3, h4 {text-align: center; color:#4f370d;}
+  h2 {
+  font-size: 5em;
+  font-weight: normal;
+}
+  h3 {
+  font-weight: normal;
+}
+  .center {
+    display: flex;
+    justify-content: center; 
+    align-items: center; }
+  .button {
+  background-color: #fdfffe;
+  border-radius: 30px;
+  border: none;
+  color: black;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 14px 12px;
+  cursor: pointer;
+}
+.button:active {
+  transform: translateY(4px);
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 35px; 
+}
+.social-icon a{
+    text-decoration: none;
+    margin-right: 20px;
+    color:#4f370d;
+}
+.social-icon :nth-child(3) {
+  margin-right: 0px;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="margin">
+    <h4 style="font-family:Verdana"> SOFTBLUSH <br> BEAUTY </br> </h4>  
+    <h2 style="font-family:Cambria"> Launching <br> soon! </h2>
+    <h3 style="font-family:Verdana"> We are currently making some <br> improvments to our website! </h3> <br>
+</div>
+<div class="center">
+    <button class="button" onclick="this.innerHTML = 'Notification sent!'"> NOTIFY ME
+</button>
+    </div> <br>
+    <div class="social-icon">
+<a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-square-facebook"></i>
+</a>
+<a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i>
+</a>
+<a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i>
+</a>
+    </div>
+    <script src="https://kit.fontawesome.com/1db7473b7d.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isAnagram(str1, str2) {
+        if (str1.length !== str2.length) return false;
+            let strOne = str1.toLowerCase().split("").sort().join("");
+            let strTwo = str2.toLowerCase().split("").sort().join("");
+
+            return strOne === strTwo ? true : false;
+        }
+
+        const star1 = "Listen";
+        const star2 = "Silent";
+        console.log(isAnagram(star1, star2));
+    </script>
+</body>
+</html>

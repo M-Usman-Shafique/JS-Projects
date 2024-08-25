@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Calibri;
+      }
+      #logo-div {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      #logo {
+        width: 200px;
+        height: auto;
+      }
+      #navbar {
+        text-align: center;
+        background-color: teal;
+        margin-top: 0;
+      }
+      #navbar li {
+        display: inline-block;
+        color: white;
+        font-size: 20px;
+        padding: 15px 25px;
+      }
+      #pic {
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+      font-size: 40px;
+      font-weight: bold;
+      color:cadetblue;
+      padding: 30px 0;
+      }
+      p {
+        font-size: 20px;
+        text-align: justify;
+      }
+      #container {
+        text-align: center;
+        padding: 28px 100px;
+      }
+      .sticky {
+      position: fixed;
+      width: 97%;
+      top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo-div">
+      <img
+        src="/Folder/images/Nature.jpg"
+        id="logo"
+        alt="Nature"
+      />
+    </div>
+    <ul id="navbar">
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Our Team</li>
+      <li>Client</li>
+      <li>Contact Us</li>
+    </ul>
+    <div id="container">
+      <h1>"All Good Things Are Wild & Free."</h1>
+      <img src="/Folder/images/Welcome.jpg" id="pic" alt="Welcome" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eum sunt
+        vitae obcaecati nostrum voluptate, illo recusandae nesciunt, voluptates
+        doloremque aspernatur. Eligendi dolor laboriosam omnis temporibus velit
+        quae officia qui, illum, corrupti vero ea aliquam? At esse dolor odit
+        tempore architecto rem voluptate excepturi explicabo voluptatum, vero,
+        ex molestias non expedita sit ullam dicta optio quam. Numquam iusto sint
+        recusandae enim rerum, esse illum, vel pariatur labore vitae repudiandae
+        sed ea quisquam, commodi itaque ex fugiat dignissimos accusamus!
+        Praesentium, delectus itaque quibusdam excepturi tenetur magnam enim
+        laborum. Excepturi aperiam iusto, est obcaecati, inventore nihil
+        assumenda, ducimus tenetur earum quo placeat accusamus consequuntur sed
+        sunt maxime blanditiis reprehenderit dolor odio. Sequi minima totam
+        libero molestiae deleniti quos hic, iste facere facilis eveniet
+        voluptatem nam accusantium suscipit, ea fugit omnis delectus ullam,
+        laudantium impedit ipsum expedita itaque voluptatum accusamus! Sapiente
+        doloribus necessitatibus ipsum alias quod explicabo repellat est
+        praesentium assumenda porro laborum accusamus consequuntur aliquam
+        ratione deserunt debitis voluptates sit qui, sunt accusantium non odio
+        labore? Qui deleniti illum, consectetur explicabo quaerat rerum
+        eligendi. Est unde aut autem quibusdam odio voluptatem quia cum
+        obcaecati saepe praesentium repellendus ab cumque ullam dolorum,
+        reiciendis asperiores deserunt assumenda, veritatis placeat adipisci
+        debitis amet nihil. Pariatur officiis molestias quod modi quam,
+        molestiae repellat alias dolores culpa dignissimos et ducimus debitis.
+        Nostrum est impedit obcaecati esse adipisci saepe laborum explicabo
+        voluptatibus veniam quam id pariatur culpa tenetur perferendis quaerat
+        dolorum placeat, dolore libero aspernatur odit. Obcaecati dolorem
+        cupiditate excepturi repellat quidem cum non, voluptate dolorum ipsum
+        saepe iusto. Harum libero modi accusamus fugiat odit est a inventore
+        corporis dolorum. Illum dicta natus ad praesentium, facere amet ratione
+        possimus voluptas aspernatur! Tempora, obcaecati minus magni aliquam
+        dignissimos laborum repellendus consequuntur eius quod, dolor, cum
+        cupiditate porro sint! Rerum veritatis fuga aliquam, qui officiis, sunt
+        recusandae rem iste quidem consectetur harum saepe? Numquam odit iste
+        aut consequatur veniam ratione sint provident quaerat tempora doloribus
+        non architecto error repudiandae ipsam laudantium et aliquam repellendus
+        esse minima, voluptatem alias labore nemo! Cupiditate nam facere,
+        doloribus labore minus rerum numquam aliquid aliquam? Vel aperiam harum
+        atque dignissimos sit id velit cum, necessitatibus deleniti neque, vero
+        ex tempore corporis magnam culpa molestiae, vitae impedit animi amet
+        nesciunt! Neque quis, ratione reiciendis eaque molestiae similique esse
+        reprehenderit sunt sed minus voluptate mollitia amet? Error impedit ab
+        corporis porro suscipit, asperiores architecto unde tempora autem
+        dignissimos hic non blanditiis similique fugiat quod sit illum fuga
+        mollitia repellat. Natus quia ipsam cupiditate itaque eveniet, cum vero
+        iste dolor in rem, consequatur ipsa iure odit molestiae quasi nobis
+        recusandae provident, ut numquam aliquid quas sed nostrum quod ducimus?
+        Non, aliquid quisquam. Quo tenetur id eveniet natus. Temporibus placeat
+        explicabo, suscipit sit optio harum eveniet numquam. Libero, maiores
+        tempora ipsa alias sint molestiae, possimus id dicta asperiores enim
+        nobis perferendis voluptatibus minima nam. Modi voluptates voluptatum
+        quam ipsam nostrum. Hic beatae incidunt inventore vero, quibusdam dolore
+        veritatis magni quas. Illo quae, at explicabo, tenetur dolorem provident
+        consequatur magni commodi molestiae neque ut in id! Inventore ea
+        adipisci tempora!
+      </p>
+    </div>
+    <script>
+    window.addEventListener('scroll', function() {
+    let navbar = document.getElementById('navbar');
+    if (window,pageYOffset >= 289) {
+    navbar.classList.add('sticky');
+    }
+    else {
+    navbar.classList.remove('sticky');
+    }
+    });
+    </script>
+  </body>
+</html>

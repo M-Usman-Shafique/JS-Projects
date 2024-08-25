@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nonRepeated = [];
+      let count = {};
+      function unrepeated(arr) {
+        for (let x in arr) {
+          const element = arr[x];
+          count[element] ? count[element]++ : (count[element] = 1);
+        }
+        for (let x in arr) {
+            element = arr[x];
+            count[element] === 1 ? nonRepeated.push(element) : null;
+        }
+        return nonRepeated;
+      }
+
+      const arr = [4, 5, 4, 5, 3, 9, 1, 3, 8];
+      console.log(unrepeated(arr));
+    </script>
+  </body>
+</html>

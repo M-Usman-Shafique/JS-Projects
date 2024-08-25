@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      // ​‌‍‌⁡⁣⁢⁣RECURSIVE BINARY SEARCH:⁡​
+      function recursiveBinary(arr, target, start = 0, end = arr.length - 1) {
+        if (start > end) {
+          return -1;
+        }
+
+        const mid = Math.floor((start + end) / 2);
+
+        if (arr[mid] === target) {
+          return mid;
+        } else if (arr[mid] > target) {
+          return recursiveBinary(arr, target, start, mid - 1); // Search in the left half
+        } else {
+          return recursiveBinary(arr, target, mid + 1, end); // Search in the right half
+        }
+      }
+
+      const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const target = 5;
+      const result = recursiveBinary(sortedArray, target);
+
+      if (result !== -1) {
+        console.log(`Target found at index: ${result}`);
+      } else {
+        console.log("Target not found");
+      }
+
+      // ​‌‍‌⁡⁣⁢⁣‍#16 ‍INSERTION & DELETION IN QUEUE USING FUNCTIONS:⁡​
+
+      // let queue = [];
+      // let size = queue.length;
+      // let max = 3;
+
+      // function enqueue(n) {
+      //   if (size === max) alert("Queue overflow!");
+      //   else {
+      //     queue[size] = n;
+      //     size++;
+      //   }
+      // }
+      // enqueue(1);
+      // enqueue(2);
+      // enqueue(3);
+      // enqueue(4);
+      // display();
+
+      // function dequeue() {
+      //   // removing 1st element 1st (FiFO)
+      //   if (size > 0) {
+      //     for (let i = 0; i < queue.length; i++) {
+      //       queue[i] = queue[i + 1];
+      //     }
+      //     size--;
+      //     queue.length = size;
+      //   } else alert("Queue is empty!");
+      // }
+
+      // dequeue();
+      // dequeue();
+      // dequeue();
+      // dequeue();
+      // display();
+
+      // function display() {
+      //   console.log(queue);
+      // }
+
+      // ​‌‍‌⁡⁣⁢⁣#15(c) INSERTION & DELETION IN STACK USING CLASS:⁡​
+
+      // class Stack {
+      //   stack = [];
+      //   size;
+      //   max;
+
+      //   constructor(max) {
+      //     this.max = max;
+      //     this.size = this.stack.length;
+      //   }
+      //   push(n) {
+      //     if (this.size >= this.max) alert("Stack overflow!");
+      //     else {
+      //       this.stack[this.size] = n;
+      //       this.size++;
+      //     }
+      //   }
+      //   pop() {
+      //     if (this.size > 0) {
+      //       this.size--;
+      //       this.stack.length = this.size;
+      //     } else alert("Stack is empty!");
+      //   }
+      //   display() {
+      //     console.log(this.stack);
+      //   }
+      // }
+
+      // let st = new Stack(3);
+      // st.push(10);
+      // st.push(20);
+      // st.push(30);
+      // st.push(40);
+      // st.display();
+      // st.pop();
+      // st.pop();
+      // st.pop();
+      // st.pop();
+      // st.display();
+
+      // ​‌‍‌⁡⁣⁢⁣#15(b) REVERSE STACK USING ANOTHER STACK:⁡​
+
+      // let stack = [];
+      // let size = stack.length;
+      // let max = 3;
+
+      // function push(n) {
+      //   if (size > max) alert("Stack Overflow!");
+      //   else {
+      //     stack[size] = n;
+      //     size++;
+      //   }
+      // }
+
+      // function pop() {
+      //   if (size > 0) {
+      //     removed = stack[size - 1];
+      //     size--;
+      //     stack.length = size;
+      //     return removed;
+      //   } else alert("Stack is empty!");
+      // }
+
+      // function reverse(myStack) {
+      //   for (let i = 0; i < myStack.length; i++) {
+      //     push(myStack[i]);
+      //   }
+      //   for (let i = 0; i < myStack.length; i++) {
+      //     myStack[i] = pop();
+      //   }
+      // }
+
+      // function display() {
+      //   console.log(myStack);
+      // }
+
+      // let myStack = [1, 2, 3];
+      // display();
+      // reverse(myStack);
+      // display();
+
+      // ​‌‍‌⁡⁣⁢⁣#15(a) ‍INSERTION & DELETION IN STACK USING FUNCTIONS:⁡​
+
+      // let stack = [];
+      // let size = stack.length;
+      // let max = 3;
+
+      // function push(n) {
+      //   if (size === max) alert("Stack overflow!");
+      //   else {
+      //     stack[size] = n;
+      //     size++;
+      //   }
+      // }
+      // push(1);
+      // push(2);
+      // push(3);
+      // push(4);
+      // display();
+
+      // function pop() {
+      //   // removing last element 1st (LiFO)
+      //   if (size > 0) {
+      //     size--;
+      //     stack.length = size;
+      //   } else alert("Stack is empty!");
+      // }
+
+      // pop();
+      // pop();
+      // pop();
+      // pop();
+      // display();
+
+      // function display() {
+      //   console.log(stack);
+      // }
+
+      // ⁡⁣⁢⁣​‌‍‌#14 ‍REVERSING ARRAY OF NUMBERS:​⁡
+
+      // let arr = [31, 45, 67, 98, 22, 76, 12, 81];
+      // let start = 0;
+      // let end = arr.length - 1;
+      // function reverse() {
+      //   while (start < end) {
+      //     let temp = arr[start];
+      //     arr[start] = arr[end];
+      //     arr[end] = temp;
+      //     start++;
+      //     end--;
+      //   }
+      // }
+      // reverse();
+      // console.log(arr);
+
+      // ⁡⁣⁢⁣​‌‍‌#13 FINDING INDICES WHO'S SUM === TARGET:​⁡
+
+      // function sum(arr, target) {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     for (let j = i + 1; j < arr.length; j++) {
+      //       if (arr[i] + arr[j] === target) {
+      //         return `index: ${i} & ${j}`;
+      //       }
+      //     }
+      //   }
+      // }
+      // console.log(sum([3, 2, 1, 4], 5));
+
+      // ⁡⁣⁢⁣​‌‍‌#12 CHECKING NUMBERS & STRINGS ARE ANAGRAM:​⁡
+
+      // function anagram(x, y) {
+      //   if (typeof x === "string" && typeof y === "string") {
+      //     return x.toUpperCase().split("").sort().join("") ===
+      //       y.toUpperCase().split("").sort().join("")
+      //       ? true
+      //       : false;
+      //   } else {
+      //     return +x.toString().split("").sort().join("") ===
+      //       +y.toString().split("").sort().join("")
+      //       ? true
+      //       : false;
+      //   }
+      // }
+
+      // console.log(anagram("Leloh", "Hello"));
+      // console.log(anagram("dwin", "mind"));
+      // console.log(anagram(12345, 34521));
+      // console.log(anagram(1234, 5324));
+      // console.log(anagram(1234, "3214"));
+      // console.log(anagram("4321", 3214));
+      // console.log(anagram("5361", 3214));
+      // console.log(anagram(1254, "3214"));
+      // console.log(anagram("3276", "Hello"));
+      // console.log(anagram("Leloh", 3241));
+
+      // ​‌‍‌⁡⁣⁢⁣#11 FIBONACCI VALUE OF nth TERM USING RECURSION:⁡​
+
+      // function fibonacci(n) {
+      //   if (n <= 0) return 0;
+      //   else if (n === 1) return 1;
+      //   else {
+      //     return fibonacci(n - 1) + fibonacci(n - 2);
+      //   }
+      // }
+      // console.log(fibonacci(3));
+
+      // ⁡⁣⁢⁣​‌‍‌#10 FINDING PALINDROME OF ANY NUMBER OR STRING:​⁡
+
+      // function palindrome(n) {
+      //   return typeof n === "number"
+      //     ? n === +n.toString().split("").reverse().join("")
+      //     : n.toUpperCase() === n.toUpperCase().split("").reverse().join("");
+      // }
+      // console.log(palindrome("Racecar"));
+
+      // ​‌‍‌⁡⁣⁢⁣#09(a) FINDING FACTORIAL USING RECURSION:⁡​
+
+      // function factorial(n) {
+      //     if (n === 0 || n === 1) {
+      //       return 1;
+      //     }
+      //     return n * factorial(n-1);
+      //   }
+      //  console.log( factorial(0));
+      //  console.log( factorial(1));
+      //  console.log( factorial(4));
+      //  console.log( factorial(-2));
+
+      // ​‌‍‌⁡⁣⁢⁣#09(b) FINDING FACTORIAL USING LOOP:⁡​
+
+      //   let result = 1;
+      //   function factorial(n) {
+      // if (n === 0 || n === 1) {
+      //   return 1;
+      // } else if (n < 0) {
+      //   return "Invalid Number!";
+      // } else {
+      //       for (let i = 1; i <= n; i++) {
+      //         result *= i;
+      //       }
+      //     }
+      //     return result;
+      //   }
+
+      //   console.log(factorial(0));
+      //   console.log(factorial(1));
+      //   console.log(factorial(5));
+      //   console.log(factorial(-2));
+
+      // ​‌‍‌⁡⁣⁢⁣#08 BUBBLE SORT ARRAY:⁡​
+
+      // let arr = [89, 34, 96, 12, 3, 12, 1];
+
+      // function sort() {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     for (let j = 0; j < arr.length; j++) {
+      //       if (arr[j] > arr[j + 1]) {
+
+      //         let temp = arr[j];
+      //         arr[j] = arr[j + 1];
+      //         arr[j + 1] = temp;
+      //       }
+      //     }
+      //   }
+      // }
+      // sort();
+      // console.log(arr);
+
+      // ​‌‍‌⁡⁣⁢⁣#07(a) MERGING ONE ARRAY INTO ANOTHER:⁡​
+
+      // let arr1 = [2, 4, 6, 8];
+      // let arr2 = [5, 10, 15, 20];
+
+      // for (let i = 0; i < arr2.length; i++) {
+      //   arr1[arr1.length] = arr2[i];
+      // }
+
+      // console.log(arr1);
+
+      // ​‌‍‌⁡⁣⁢⁣#07(b) MERGING TWO ARRAYS IN A NEW ARRAY:⁡​
+
+      // let arr1 = [5, 10, 15, 20];
+      // let arr2 = [2, 4, 6, 8];
+      // let arr3 = [];
+
+      // for (let i = 0; i < arr1.length; i++) {
+      //   arr3[i] = arr1[i];
+      // }
+      // for (let i = 0; i < arr2.length; i++) {
+      //   arr3[arr1.length + i] = arr2[i]; // logic
+      // }
+      // console.log(arr3);
+
+      // ⁡⁣⁢⁣​‌‍‌#06(a) LINEAR SEARCH: INDICES BY VALUE:​⁡
+
+      // function searching(num) {
+      //   let found = false;
+      //   let indices = [];
+
+      //   for (let x in arr) {
+      //     if (arr[x] === num) {
+      //       indices[indices.length] = parseInt(x);    // logic
+      //       found = true;
+      //     }
+      //   }
+      //   if (!found) {
+      //     console.log("Sorry, not found!");
+      //   } else {
+      //     console.log(index);
+      //   }
+      // }
+
+      // searching(12);
+
+      // ​‌‍‌⁡⁣⁢​‌‍‌⁡⁣⁢⁣#06(b) BINARY SEARCH: INDEX BY VALUE:⁡​
+
+      // let arr = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      // let start = 0;
+      // let end = arr.length - 1;
+
+      // function search(target) {
+      //   while (start <= end) {
+      //     let mid = Math.floor((start + end) / 2);
+      //     if (arr[mid] === target) return mid;
+      //     else if (arr[mid] < target) start = mid + 1;
+      //     else end = mid - 1;
+      //   }
+      //   return -1; // target not found
+      // }
+
+      // console.log(search(8));
+
+      // ⁡⁣⁢⁣​‌‍⁡⁣⁢⁣​‌‍​‌​‌‍‌‍#05 ‍‍DELETING ELEMENT FROM A SPECIFIC INDEX:⁡​
+
+      // function delt(index) {
+      //   let found = false;
+      //   if (index < 0 || index >= arr.length) {
+      //     console.log("Invalid Index!");
+      //   } else {
+      //     for (let x = 0; x < arr.length; x++) {
+      //       if (x >= index) {
+      //         found = true;
+      //         arr[x] = arr[x + 1];    // logic
+      //       }
+      //     }
+      //   }
+      //   arr.length = arr.length - 1;
+      //   if (found) {
+      //     console.log(arr);
+      //   }
+      // }
+      // delt(7);
+
+      // ⁡⁣⁢⁣​‌​‌‍‌‍#04 DELETING SPECIFIC ELEMENT FROM AN ARRAY:⁡​
+
+      // function del(num) {
+      //   let found = false;
+      //   for (let x = 0; x < arr.length; x++) {
+      //     if (arr[x] === num) {
+      //       found = true;
+      //       arr[x] = arr[x + 1];
+      //       num = arr[x];        // logic
+      //     }
+      //   }
+      //   arr.length = arr.length - 1;
+      //   if (!found) {
+      //     console.log("Invalid Number!");
+      //   } else {
+      //     console.log(arr);
+      //   }
+      // }
+      // del(4);
+
+      // ​‌‍‌⁡⁣⁢⁣#03 ‍TRAVERSING & ACCESSING VALUE BY INDEX:⁡​
+
+      // function trav1(index) {
+      //   console.log("Accessing Value by Index:");
+      //   if (index < 0 || index > arr.length) {
+      //     console.log("Unvalid Index!");
+      //   } else {
+      //     for (let x in arr) {
+      //       // 'x' is a string represents indices of array, therefore:
+      //       if (parseInt(x) === index) {
+      //         // if (x == index) also works.
+      //         console.log(`${x}th: ${arr[x]} found`);
+      //       } else {
+      //         console.log(`${x}th: ${arr[x]}`);
+      //       }
+      //     }
+      //   }
+      // }
+      // trav1(2);
+
+      // ⁡⁣⁢⁣​‌‍‌#02 TRAVERSING & ACCESSING SPECIFIC INDEX BY VALUE:​⁡
+
+      // function trav2(num) {
+      //   let found = false;
+      //   console.log("Accessing Index by Value:");
+      //   for (let x in arr) {
+      //     if (arr[x] === num) {
+      //       found = true;
+      //       console.log(`${x}th: ${arr[x]} found`);
+      //     } else {
+      //       console.log(`${x}th: ${arr[x]}`);
+      //     }
+      //   }
+      //   if (!found) {
+      //     console.log("Sorry not found!");
+      //   }
+      // }
+
+      // trav2(8);
+
+      // ⁡⁣⁢⁣​‌‍‌‍‍#01 INSERTION AT A PARTICULAR INDEX:​⁡
+
+      // function insert(num, position) {
+      //   if (position < 0 || position > arr.length) {
+      //     console.log("Unvalid Number");
+      //   } else {
+      //     for (let i = arr.length - 1; i >= position; i--) {
+      //       if (i > position) {
+      //         arr[i + 1] = arr[i];      // logic
+      //       } else if (i === position) {
+      //         arr[i + 1] = arr[i];      // logic x2
+      //         arr[i] = num;
+      //         console.log(arr);
+      //       }
+      //     }
+      //   }
+      // }
+      // insert(15, 17);
+    </script>
+  </body>
+</html>

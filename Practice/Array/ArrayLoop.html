@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Loops</title>
+  </head>
+  <body>
+    <script>
+      // Multi-dimensional array
+      let ary = [
+                 ["Name", "Age", "Gender"],
+                 ["Imran", 30, "M"],
+                 ["Rizwan", 25, "M"],
+                 ["Sadia", 22, "F"],
+                 ["Nadia", 26, "F"],
+                ];
+
+      // using simple for loop
+      for (let i = 0; i < ary.length; i++) {
+        for (let j = 0; j < ary[i].length; j++) {
+          document.write(ary[i][j] + " ");
+        }
+        document.write("<br>");
+      }
+      document.write("_______________" + "<br>");
+
+      // using for of loop
+      for (let x of ary) {
+        for (let y of x) {
+          document.write(y + " ");
+        }
+        document.write("<br>");
+      }
+      document.write("_______________" + "<br>");
+
+      // using forEach loop
+      ary.forEach((val) => {
+        val.forEach((elm) => {
+          document.write(elm + " ");
+        });
+        document.write("<br>");
+      });
+    </script>
+  </body>
+</html>

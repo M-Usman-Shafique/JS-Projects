@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        font-family: Calibri;
+        margin: 0;
+        background-color: #203346;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #container {
+        background-color: white;
+        padding: 1.875rem 3.125rem;
+        text-align: center;
+        height: 65%;
+        border-radius: 2.5rem;
+      }
+      h2 {
+        font-size: 1.875rem;
+        color: rgba(0, 0, 0, 0.609);
+        font-family: sans-serif;
+      }
+      input {
+        width: 18.75rem;
+        margin: 0.625rem 0rem;
+        padding: 0.9375rem 0px;
+        outline: none;
+        border: none;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.469);
+        font-size: 1rem;
+        background: transparent;
+        /* transition: border-color 0.2s; */
+      }
+      input::placeholder {
+        color: rgba(0, 0, 0, 0.398);
+      }
+      #sbmt {
+        width: 18.875rem;
+        background-color: #203346;
+        border: none;
+        color: rgba(255, 255, 255, 0.938);
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.0625rem;
+      }
+      .error {
+        color: red;
+        margin: 0rem;
+        text-align: left;
+      }
+      .message {
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+      .message .success {
+        font-size: 1.25rem;
+        color: green;
+        position: absolute;
+        animation: buttons 0.3s linear;
+        display: none;
+      }
+      .message .danger {
+        font-size: 1.25rem;
+        color: red;
+        position: absolute;
+        display: none;
+      }
+      @keyframes buttons {
+        0% {
+          transform: scale(0.1);
+        }
+        50% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Login</h2>
+      <form id="form">
+        <input type="text" placeholder="Username" id="usrnm" /><br />
+        <p id="usrError" class="error"></p>
+        <input type="password" placeholder="Password" id="pswrd" /><br />
+        <p id="pswrdError" class="error"></p>
+        <input type="submit" id="sbmt"/><br />
+        <div class="message">
+          <p class="success" id="success">Form Successfully Submitted!</p>
+          <p class="danger" id="danger">Form Submission Failed!</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      let username = document.getElementById("usrnm");
+      let password = document.getElementById("pswrd");
+      let form = document.getElementById("form");
+      let submit = document.getElementById("sbmt");
+      const success = document.getElementById("success");
+      const danger = document.getElementById("danger");
+
+      form.addEventListener("submit", validation);
+      var flagA = true;
+      var flagB = true;
+
+      function validation(e) {
+        flagA = false; // Reset flags at the beginning of validation.
+        flagB = false; // Not mendatory.
+
+        if (username.value === "") {
+          document.getElementById("usrError").innerHTML = "Username is empty.";
+          failure();
+          e.preventDefault();
+          flagA = false;
+        } else if (username.value.length < 4) {
+          document.getElementById("usrError").innerHTML =
+            "Username requires at least 4 characters.";
+          failure();
+          e.preventDefault();
+          flagA = false;
+        } else {
+          document.getElementById("usrError").innerHTML = "";
+          flagA = true;      // Set flagA to true if username validation passes.
+          e.preventDefault();
+        }
+
+        if (password.value === "") {
+          document.getElementById("pswrdError").innerHTML =
+            "Password is empty.";
+          danger.style.display = "block";
+          failure();
+          e.preventDefault();
+          flagA = false;
+        } else if (password.value.length < 4) {
+          document.getElementById("pswrdError").innerHTML =
+            "Password requires at least 4 characters.";
+          failure();
+          e.preventDefault();
+          flagA = false;
+        } else {
+          document.getElementById("pswrdError").innerHTML = "";
+          flagB = true;      // Set flagB to true if password validation passes.
+
+          if (flagA && flagB) {
+            // Only display success message if both flags are true.
+
+            successful(); // function call to show success message.
+
+            // setTimeout(() => {      //reset input fields without reloading the page.
+            //   username.value = "";
+            //   password.value = "";
+            // }, 1000);
+
+          } else {
+            failure(); // function call to show fail message.
+          }
+        }
+      }
+
+      function successful() {
+        setTimeout(function () {
+          window.location.reload();
+        }, 2000);
+        success.style.display = "block";
+        setTimeout(() => {
+          success.style.display = "none";
+        }, 2000);
+      }
+      function failure() {
+        danger.style.display = "block";
+        setTimeout(() => {
+          danger.style.display = "none";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

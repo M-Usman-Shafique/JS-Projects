@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      // ⁡⁣⁢⁣Reverse using Recursion:⁡
+
+      function reverse(str) {
+        let arr = str.split("");
+        let x = 0;
+
+        const recursion = () => {
+          if (x < arr.length / 2) {   // Base case
+            let temp = arr[x];
+            arr[x] = arr[arr.length - x - 1];
+            arr[arr.length - x - 1] = temp;
+            x++;
+            recursion();  // call recursion to continue reversing...
+          }
+        };
+
+        recursion();   // call recursion to start the process.
+        return arr.join("");
+      }
+
+      console.log(reverse("drawer"));
+
+      
+    </script>
+  </body>
+</html>

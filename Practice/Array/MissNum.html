@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Finding the missing integer of an array.
+        function missNum(arr) {
+            let n = arr.length + 1;     // As one integer is missing.
+            let expectedSum = (n * (n + 1)) / 2;
+            let actualSum = arr.reduce((acc, curr) => acc + curr, 0);
+            return expectedSum - actualSum;
+        }
+
+        let arr = [1, 2, 3, 4, 5, 6, 8, 9, 10];
+        let missedNum = missNum(arr);
+        console.log(missedNum);
+    </script>
+</body>
+</html>

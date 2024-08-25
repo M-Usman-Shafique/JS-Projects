@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="orng">Orange</button>
+    <button id="grn">Green</button>
+    <script>
+      function clickHandler(color) {
+        document.body.style.backgroundColor = `${color}`;
+      }
+      document.getElementById("orng").onclick = clickHandler("orange");
+      document.getElementById("grn").onclick = clickHandler("green");
+      // Problem: orange or whatever color we passed through the clickHandler function, it will be applied to the document without clicking the button.
+      // Solution: Closure...
+      function clickHandler(color) {
+        return function () {
+          // closure function
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+
+
+
+      // Random Guess Game using Closure Function:
+
+      function guessGame(amount) {
+        let answer = Math.round(Math.random() * 10);
+        let turns = 0;
+        return function game(guess) {
+          if (turns >= amount) {
+            return "Game Over!";
+          }
+          turns++;
+          if (guess === answer) {
+            return "You Got it!";
+          } else if (guess > answer) {
+            return "Too High!";
+          } else {
+            return "Too Low!";
+          }
+        };
+      }
+      let g = guessGame(3); // amount parameter of outer function
+      console.log(g(2)); // guess parameter of inner function
+      console.log(g(4));
+      console.log(g(6));
+      console.log(g(7));
+    </script>
+  </body>
+</html>

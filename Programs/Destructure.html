@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // TODO: Array of Objects:
+
+      let grocery = [
+        { item: "Apples", price: 25, type: "fruit" },
+        { item: "bread", price: 30, type: "misc" },
+        { item: "onions", price: 20, type: "vege" },
+        { item: "Milk", price: 35, type: "dairy" },
+      ];
+
+      // let [{item, price, type}] = grocery;
+      // console.log(item, price, type);
+      // output: Apples 25 fruit
+
+      // let [{price, type}] = grocery;
+      // console.log(price, type);
+      // output: 25 fruit
+
+      // let [,,{item, price, type}] = grocery;
+      // console.log(item, price, type);
+      // output: onions 20 vege
+
+      // let [,,,{item, price}] = grocery;
+      // console.log(item, price);
+      // output: Milk 35
+
+      // let [,{item, price, type},...rest] = grocery;
+      // console.log(item, price, type, ...rest);
+      // output: bread 30 misc
+      // {item: 'onions', price: 20, type: 'vege'}
+      // {item: 'Milk', price: 35, type: 'dairy'}
+
+      // let [,,{item, ...price}] = grocery;
+      // console.log(item, price);
+      // output: onions {price: 20, type: 'vege'}
+
+      // let [{...item}] = grocery;
+      // console.log(item);
+      // output: {item: 'Apples', price: 25, type: 'fruit'}
+
+      // TODO: Object of Arrays:
+
+      let user = { name: "Faraz", bio: [30, "Lahore", "Male"] };
+
+      // let {name, bio: [age, city, gender]} = user;
+      // console.log(name, age, city, gender);
+      // output: Faraz 30 Lahore Male
+
+      // let {...bio} = user;
+      // console.log(bio);
+      // output: {name: 'Faraz', bio: Array(3)}
+
+      // let {bio: [...ary]} = user;
+      // console.log(...ary);
+      // output: 30 'Lahore' 'Male'
+
+   
+      let {bio: [,, gender]} = user;
+      console.log(gender);   
+      // output: Male
+    </script>
+  </body>
+</html>

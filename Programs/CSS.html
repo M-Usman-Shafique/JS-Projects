@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI";
+      }
+      .box {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .header {
+        width: 100%;
+        height: 100px;
+        background-color: #778da9;
+        color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .content {
+        width: 100%;
+        height: calc(100% - 180px); /* header= 80px + footer: 100px */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .left, .right {
+        height: 100%;
+        width: 20%;
+        background-color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        padding: 10px;
+        word-break: break-all;
+
+      }
+      .middle {
+        height: 100%;
+        width: 60%;    /* 100-20-20 */
+        background-color: #23424a;
+        color:white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: #778da9;
+        color:black;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="header">Header</div>
+      <div class="content">
+        <div class="left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt accusantium doloribus mollitia quibusdam explicabo voluptates voluptate modi iste natus veritatis commodi dignissimos, tempora laudantium exercitationem fuga nihil quos asperiores minima. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores dolorem, cumque praesentium ex repudiandae commodi neque aut corporis suscipit doloremque.</div>
+        <div class="middle">Middle</div>
+        <div class="right">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt accusantium doloribus mollitia quibusdam explicabo voluptates voluptate modi iste natus veritatis commodi dignissimos, tempora laudantium exercitationem fuga nihil quos asperiores minima. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores dolorem, cumque praesentium ex repudiandae commodi neque aut corporis suscipit doloremque.</div>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

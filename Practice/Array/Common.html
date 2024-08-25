@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let i = 0, j = 0, k = 0;
+      let commons = [];
+      function Common(arr1, arr2, arr3) {
+        while (i < arr1.length && j < arr2.length && k < arr3.length) {
+          if (arr1[i] === arr2[j] && arr2[j] === arr3[k]) {
+            commons = [...commons, arr1[i]];
+            i++;
+            j++;
+            k++;
+          } else if (arr1[i] < arr2[j]) i++;
+          else if (arr2[j] < arr3[k]) j++;
+          else k++;
+        }
+        return commons;
+      }
+
+      const arr1 = [1, 2, 3, 4, 5];
+      const arr2 = [3, 4, 5, 6, 7];
+      const arr3 = [4, 5, 6, 7, 8];
+
+      console.log(Common(arr1, arr2, arr3));
+    </script>
+  </body>
+</html>

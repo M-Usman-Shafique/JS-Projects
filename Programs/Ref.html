@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value & Reference</title>
+</head>
+<body>
+    <img src="/images/Ref.png" alt="Reference Types">
+    <script>
+        let x = 3;
+        let y = 3;
+        console.log(x === y);    // output: true
+
+        let obj1 = {age: 25};
+        let obj2 = {age: 25};
+        let obj3 = obj2;
+        console.log(obj1 === obj2);     // output: false
+        console.log(obj2 === obj3);    // output: true
+
+        let arr1 = [1, 2, 3];
+        let arr2 = arr1;
+        arr2.push(4, 5);
+        console.log(arr1);       // output: [1, 2, 3, 4, 5]
+
+        arr1 = [];    // a new array created in heap who's ref. assigned to arr1.
+        console.log(arr2);      // output: [1, 2, 3, 4, 5]
+        console.log(arr1);     // output: []
+    </script>
+</body>
+</html>

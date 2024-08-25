@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findNum(arr, num) {
+            for (let x in arr) {
+              if (arr[x] === num) return x;
+            }
+            return "Not found";
+        }
+        const data = [1, 2, 3, 4, 5, 6];
+        const number = 3;
+        console.log(findNum(data, number));
+    </script>
+</body>
+</html>

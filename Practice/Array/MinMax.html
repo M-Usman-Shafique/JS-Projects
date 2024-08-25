@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+   // ⁡⁣⁢⁣​‌‍‌Using Bubble Sort:​⁡
+
+      function minMax(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length - i - 1; j++) {   // -i for excluding the higher sorted elements at the end of the array.
+            if (arr[j] > arr[j + 1]) {
+              let temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        return `min= ${arr[0]}, max= ${arr[arr.length - 1]}`;
+      }
+
+      // ⁡⁣⁢⁣​‌‍‌Without Sorting (Optimized):​⁡
+
+      // function minMax(arr) {
+      // let min = 0;
+      // let max = 0;
+
+      // for (let x of arr) {
+      //     if (min > x) {
+      //         min = x;
+      //     }
+      //     if (max < x) {
+      //         max = x
+      //     }
+      // }
+      // return `min= ${min}, max= ${max}`
+      // }
+
+      const data = [3, 1, 5, 2, 0, 4];
+      const newData = minMax(data);
+      console.log(newData);
+    </script>
+  </body>
+</html>

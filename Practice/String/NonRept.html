@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = {};
+        function unRepeated(str) {
+            for (let i = 0; i < str.length; i++) {
+                const element = str[i];
+                count[element] ? count[element]++ : count[element] = 1;
+            }
+
+            for (let i = 0; i < str.length; i++) {
+                const element = str[i];
+                return count[element] === 1 ? element : null;
+                break;
+            }
+        }
+
+        const star = "Hello";
+        console.log(unRepeated(star));
+    </script>
+</body>
+</html>
