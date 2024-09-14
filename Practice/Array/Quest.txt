@@ -69,14 +69,15 @@ Create a function that debounces another function, limiting how often it can be 
 
 Day 7: Asynchronous JavaScript
 Write a function that simulates a delay using setTimeout and then prints a message.
-Implement a function that fetches data from a mock API using Promises.
 Write an async function that waits for a Promise to resolve and then logs the result.
-Implement a function that retries an asynchronous operation a specified number of times.
-Write a function that executes multiple Promises in parallel and returns their results.
 Implement a function that handles an asynchronous operation with both success and failure cases.
-Write a function that uses Promise.all to fetch data from multiple sources simultaneously.
+Implement a function that fetches data from a mock API using Promises.
+Implement a function that retries an asynchronous operation a specified number of times.
 Implement an async function that reads a file and logs its content (simulate with a delay).
 Write a function that chains Promises to perform a sequence of asynchronous tasks.
+Write a function that executes multiple Promises in parallel and returns their results.
+Write a function that uses Promise.all to fetch data from multiple sources simultaneously.
+
 
 Day 8: ES6+ Features
 Write a function that uses template literals to format a string with variables. Implement a function that destructures an object into individual variables. Write a function that merges two arrays using the spread operator.
