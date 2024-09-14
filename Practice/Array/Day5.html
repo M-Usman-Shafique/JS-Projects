@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day#5</title>
+  </head>
+  <body>
+    <script>
+      let car = {
+        name: "BMW",
+        color: "Black",
+        start: function () {
+          return "car is started";
+        },
+        distance: function () {
+          return "covered 100 miles";
+        },
+        stop: function () {
+          return "car is stopped";
+        },
+      };
+
+      let user = {
+        fName: "Usman",
+        lName: "Shafiq",
+        fullName: function () {
+          return `${this.fName} ${this.lName}`;
+        },
+        address: {
+          country: "PAK",
+          city: "Lahore",
+          zip: 5125,
+        },
+      };
+
+      function addAge(age) {
+        this.age = age;
+      }
+
+      addAge.call(user, 15);
+
+      //   console.log(user)
+
+      //   console.log(user.fullName());
+
+      //   console.log(Object.keys(user).length === 0) // false
+
+      // console.log(user.hasOwnProperty("fName")) // true
+      // console.log(user.hasOwnProperty("age")) // true
+      // console.log(user.hasOwnProperty("city")) // false
+
+      //   function NestedPrint(obj) {
+      //     for (let key in obj) {
+      //       if (obj.hasOwnProperty(key)) {
+      //         if (typeof obj[key] === "object") {
+      //           console.log(`${key}:`);
+      //           NestedPrint(obj[key]);
+      //         } else if (typeof obj[key] === "function") {
+      //           const result = obj[key](); // function call
+      //           console.log(`${key}: ${result}`);
+      //         } else {
+      //           console.log(`${key}: ${obj[key]}`);
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   NestedPrint(user);
+      //   NestedPrint(car);
+
+      // function AllKeys(obj) {
+      //     let keys = [];
+      //     for (let key in obj) {
+      //         keys = [...keys, key]
+      //     }
+      //     return keys;
+      // }
+
+      // console.log(AllKeys(user))
+
+      //   function Dell(obj, delProp) {
+      //     for (let key in obj) {
+      //       if (obj.hasOwnProperty(key)) {
+      //         if (key === delProp) {
+      //           delete obj[key];
+      //           console.log(`${key} is deleted`);
+      //         } else if (typeof obj[key] === "object") {
+      //           Dell(obj[key], delProp);
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   Dell(user, "zip")
+      //   console.log(user);
+
+      // function isEqual(obj1, obj2) {
+      //   // reference comparison:
+      //   // const obj1 = { a: 1 };
+      //   // const obj2 = obj1;
+      //   return obj1 === obj2;
+
+      //   // properties comparison:
+      //   // const obj1 = { a: 1, b: 2 };
+      //   // const obj2 = { x: 3, y: 4 };
+      //   return Object.keys(obj1).length === Object.keys(obj2).length;
+
+      //   // top-level values comparison:
+      //   // const obj1 = { a: 1, b: 2 };
+      //   // const obj2 = { a: 1, b: 2 };
+      //   for (let key in obj1) {
+      //     if (!obj2.hasOwnProperty(key)) {
+      //       return false;
+      //     }
+      //     if (obj1[key] !== obj2[key]) {
+      //       return false;
+      //     }
+      //   }
+
+      //   for (let key in obj2) {
+      //     if (!obj1.hasOwnProperty(key)) {
+      //       return false;
+      //     }
+      //     if (obj2[key] !== obj1[key]) {
+      //       return false;
+      //     }
+      //   }
+      //   return true;
+      // }
+
+      function Compare(obj1, obj2) {
+        // reference comparison:
+        //   // const obj1 = { a: 1 };
+        //   // const obj2 = obj1;
+        if (obj1 === obj2) {
+          return true;
+        }
+
+        // Get the keys of both objects
+        let keys1 = Object.keys(obj1);
+        let keys2 = Object.keys(obj2);
+
+        // number of keys comparison:
+        //   // const obj1 = { a: 1, b: 2 };
+        //   // const obj2 = { x: 3, y: 4 };
+        if (keys1.length !== keys2.length) {
+          return false;
+        }
+
+        // keys' values comparison:
+        for (let key of keys1) {
+          if (!keys2.includes(key) || !Compare(obj1[key], obj2[key])) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

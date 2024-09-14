@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day#4</title>
+  </head>
+  <body>
+    <script>
+      // function Sum(arr) {
+      //     return arr.reduce((acc, curr) => acc + curr);
+      // }
+
+      // console.log(Sum([5, 1, 2, 3, 4]))
+
+      // function Flat(arr) {
+      //     return arr.flat(2);
+      // }
+
+      // console.log(Flat(["a", "b", ["c", [true, "Hello"], "d"], 3, 4]))
+
+      // function Remove(element) {
+      //     let arr = [1, 2, 3, "a", true]
+      //     // for (let x in arr) {
+      //     //     if (arr[x] === element) {
+      //     //         arr.splice(x, 1)
+      //     //     }
+      //     // }
+      //     // return arr;
+      //     return arr.filter(item => item !== element);
+      // }
+
+      // console.log(Remove(1))
+
+      function DelDup(arr) {
+        let set = new Set(arr);
+        let ary = [...set];
+        return ary;
+        // for (let x in arr) {
+        //     for (let y in arr) {
+        //         if(arr[x] === arr[y] && x !== y) {
+        //             arr.splice(x, 1)
+        //         }
+        //     }
+        // }
+        // return arr;
+      }
+
+      console.log(DelDup([1, 2, 2, 3, 4, 4, 4]));
+
+      //   function Duplicate(arr) {
+      //     let dup = [];
+      //     for (let x in arr) {
+      //       for (let y in arr) {
+      //         if (arr[x] === arr[y] && x !== y) {
+      //           if (!dup.includes(arr[x])) {
+      //             dup.push(arr[x]);
+      //           }
+      //         }
+      //       }
+      //     }
+      //     return dup;
+      //   }
+
+      //   console.log(Duplicate([1, 2, 2, 2, "a", "c", "c"]));
+
+      // function Frequency(arr) {
+      //     let freq = {};
+      //     for (let x of arr) {
+      //         freq[x] ? freq[x]++ : freq[x] = 1
+      //     }
+      //     return freq;
+      // }
+
+      // console.log(Frequency([1, 1, 1, 2, 2, 3, 4]))
+
+      //   function CheckAscending(arr) {
+      //     for (let i = 0; i <= arr.length - 1; i++) {
+      //       if (arr[i] > arr[i + 1]) return false;
+      //     }
+      //     return true;
+      //   }
+
+      //   console.log(CheckAscending([0, 1, 2, 3, 5, 4]));
+
+      //  function Intersection(arr1, arr2) {
+      //     let set1 = new Set(arr1)
+      //     let set2 = new Set(arr2)
+
+      //     let intersect = [...set1].filter(item => set2.has(item))
+      //     return intersect;
+
+      //  }
+
+      //       let arr1 = [1, 3, 2, 2, 3, 4]
+      //       let arr2 = [4, 3, 2, 4, 5]
+      //       console.log(Intersection(arr1, arr2))
+
+      function Duplicate(arr) {
+        
+      }
+    </script>
+  </body>
+</html>

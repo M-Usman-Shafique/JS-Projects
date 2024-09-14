@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+  </head>
+  <body>
+    <script>
+      let quotes = [
+        { id: 1, quote: "Knowledge is light.", author: "-Sartre" },
+        { id: 2, quote: "Silence is language.", author: "-Martin" },
+        { id: 3, quote: "Humans are tough.", author: "-Michael" },
+        { id: 4, quote: "Water is fluid.", author: "-Gabriel" },
+        { id: 5, quote: "Haste make wastes.", author: "-John" },
+      ];
+
+      function Generator(arr) {
+
+        let randIndex = Math.floor(Math.random() * arr.length);
+
+        let selectedQuote = arr[randIndex];
+
+        // let randId = Math.floor(Math.random() * arr.length) + 1;
+
+        // let selectedQuote = arr.find(item => item.id === randId);
+
+        console.log(selectedQuote.quote);
+        console.log(selectedQuote.author);
+      }
+
+      Generator(quotes);
+    </script>
+  </body>
+</html>

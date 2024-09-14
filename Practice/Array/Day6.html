@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day#6</title>
+  </head>
+  <body>
+    <script>
+      // ---------- CLOSURE --------- //
+      // function outer(inp, n) {
+      //     let result = 0;
+      //    function inner() {
+      //     return result = inp + n
+      //    }
+      //    return inner();
+      // }
+
+      // console.log(outer(2, 3))
+
+      // --------- HOF ----------//
+      // const welcome = (arg) => {
+      //     console.log(`Hi ${arg}! Welcome back...`)
+      // }
+
+      // const bye = (arg) => {
+      //     console.log(`Bye ${arg}! Take Care...`)
+      // }
+
+      // function hof(callback) {
+      //     callback("Usman")
+      // }
+
+      // hof(welcome);
+      // hof(bye)
+
+      // ----------- CURRYING ------------ //
+      //   function base(n) {
+      //     return function exp(p) {
+      //       return Math.pow(n, p);
+      //     }
+      //   }
+
+      //   let baseOf2 = base(2);
+      //   console.log(baseOf2(3));
+
+      // ----------- Fibonacci ------------ //
+      //   function Fibonacci(n) {
+      //     if (n === 0) return 0;
+      //     if (n === 1) return 1;
+      //     if (n > 1) {
+      //       return Fibonacci(n - 1) + Fibonacci(n - 2);
+      //     } else return "invalid number"
+      //   }
+
+      //   console.log(Fibonacci(-3));
+
+      // ---------- Rest Parameters ---------- //
+      // function sum(...args) {
+      //     return args.reduce((acc, curr) => acc + curr, 0);
+      // }
+
+      // console.log(sum(2, 3, 4, 2, 4))
+
+      //   function Filter(arr, prop) {
+      //     return arr.filter((item) => item.hasOwnProperty(prop));
+      //   }
+
+      //   const arr = [
+      //     { name: "Alice", age: 25 },
+      //     { name: "Bob" },
+      //     { name: "Charlie", age: 30 },
+      //   ];
+
+      //   console.log(Filter(arr, "age"));
+
+      //   function compose(fn1, fn2, num) {
+      //     return fn2(fn1(num));
+      //   }
+
+      //   let sum = (x) => x + 2;
+      //   let mult = (x) => x * 3;
+
+      //   console.log(compose(sum, mult, 1));
+
+      function towerOfHanoi(n, source, auxiliary, target) {
+        if (n === 0) return;
+
+        // Move n-1 disks from source to auxiliary, so they are out of the way
+        towerOfHanoi(n - 1, source, target, auxiliary);
+
+        // Move the nth disk from source to target
+        console.log(`Move disk ${n} from ${source} to ${target}`);
+
+        // Move the n-1 disks from auxiliary to target
+        towerOfHanoi(n - 1, auxiliary, source, target);
+      }
+
+      // Example usage
+      const nDisks = 3;
+      towerOfHanoi(nDisks, "A", "B", "C");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day#3</title>
+  </head>
+  <body>
+    <script>
+      // function Palindrome(value) {
+      //     // return value === value.split('').reverse().join('');
+      //     let reversed = "";
+      //     for (let i = value.length - 1; i >= 0; i--) {
+      //         reversed += value[i];
+      //     }
+      //     console.log(reversed)
+      //     return value === reversed;
+      // }
+
+      // console.log(Palindrome("shell"))
+
+      // function Reverse(arr) {
+      //     let reversed = [];
+      //     // for (let x of arr) {
+      //     //     reversed.unshift(x);
+      //     // }
+      //     for (let i = arr.length - 1; i >= 0; i--) {
+      //         // reversed.push(arr[i]);
+      //         reversed = [...reversed, arr[i]]
+      //     }
+      //     return reversed;
+      // }
+
+      // console.log(Reverse(["a", "b", "c"]))
+
+      // function TitleCase(str) {
+      //     let spcIndex = str.indexOf(' ');
+      //     let firstWordChar = str.charAt(0).toUpperCase();
+      //     let restChars = str.slice(1, spcIndex).toLowerCase();
+      //     let firstWord = firstWordChar.concat(restChars);
+      //     let secondWordChar = str.charAt(spcIndex+1).toUpperCase();
+      //     let restChar = str.slice(spcIndex+2).toLowerCase();
+      //     let secondWord = secondWordChar.concat(restChar);
+
+      //     return firstWord.concat(' ', secondWord)
+      // }
+
+      //   function TitleCase(str) {
+      //     let words = str.split(" ");
+      //     words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+      //     return words.join(' ');
+      //   }
+
+        // console.log(TitleCase("hello brave new world"));
+
+      // function Random(start, end) {
+      //     let rand = Math.floor(Math.random() * end) +  start;
+      //     return rand;
+      // }
+
+      // console.log(Random(1, 10))
+
+    //   function Longest(str) {
+    //     let words = str.split(' ');
+    //     for (let i = 0; i < words.length - 1; i++) {
+    //       for (let j = 0; j < words.length - i - 1; j++) {
+    //         if (words[j].length < words[j+1].length) {
+    //             [words[j], words[j+1]] = [words[j+1], words[j]];
+    //         }
+    //       }
+    //     }
+    //     console.log(words)
+    //     return words[0];
+    //   }
+
+    // function Longest(str) {
+    //     let words = str.split(' ');
+    //     let longest = words[0];
+    //     for (let x in words) {
+    //         if (words[x].length > longest.length) {
+    //             longest = words[x];
+    //         }
+    //     }
+    //     return longest;
+    // }
+
+    //   console.log(Longest("hello brave newwwww world"));
+    </script>
+  </body>
+</html>

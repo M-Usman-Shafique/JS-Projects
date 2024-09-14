@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <script>
+      let todo = [];
+      let req = prompt("Enter add, list, delete, or done:");
+
+      while (req !== "done") {
+        if (req === "add") {
+          let task = prompt("Enter task to add:");
+          todo.push(task);
+        } else if (req === "list") {
+          if (todo.length !== 0) {
+            todo.map((item) => alert(item));
+            alert(todo)
+          } else {
+            alert("List is empty");
+          }
+        } else if (req === "delete") {
+          let delItem = prompt("Enter task to delete:");
+          todo = todo.filter((item) => item !== delItem);
+          alert(`${delItem} has been deleted`);
+        } else {
+          alert(
+            "Unknown command. Please enter add, list, delete, or done."
+          );
+        }
+        req = prompt("Enter add, list, delete, or done:");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+Day 1: JavaScript Basics
+Declare variables using let and const and print their values.
+Write a program to convert Celsius to Fahrenheit.
+Perform basic arithmetic operations on two numbers.
+Check if a number is positive, negative, or zero.
+Concatenate two strings and display the result.
+Calculate the length of a string and print it.
+Find the area of a circle given its radius.
+Write a program to swap two numbers.
+Check if a string contains a specific substring.
+Use template literals to create a message with variables.
+
+Day 2: Control Structures
+Write a program that prints "Hello" 5 times using a loop.
+Create a simple calculator using if-else statements.
+Check if a number is even or odd using a ternary operator.
+Write a program that finds the largest of three numbers.
+Use a switch statement to print the name of a day based on its number (1 for Monday, etc.).
+Write a program to calculate the sum of all numbers from 1 to 100.
+Implement a loop that prints the Fibonacci series up to 10 terms.
+Write a program that reverses a given number.
+Implement a program that checks if a number is prime.
+Use nested loops to print a pattern of stars.
+
+Day 3: Functions
+Write a function to calculate the factorial of a number.
+Implement a function that checks if a string is a palindrome.
+Write a function to find the greatest common divisor (GCD) of two numbers. Implement a function that converts a string to title case.
+Create a function that reverses an array.
+Implement a function that finds the longest word in a sentence.
+Write a function that generates a random number between two values.
+
+Day 4: Arrays
+Write a program that finds the maximum value in an array.
+Write a function that returns the sum of all elements in an array.
+Create a function that flattens a multidimensional array.
+Implement a function that merges two sorted arrays into one.
+Write a function that removes a specific element from an array.
+Implement a function that removes duplicates from an array.
+Write a program to find all the duplicates.
+Write a program to find elements that have duplicates.
+Write a program to find the frequency of each element.
+Write a program to find the intersection of two arrays.
+Write a function that checks if an array is sorted in ascending order.
+Implement a function that rotates an array by k positions.
+Create a function that splits an array into chunks of a given size.
+
+Day 5: Objects
+Create an object to store information about a book (title, author, year).
+Implement a method in an object that returns the full name of a person.
+Write a function that adds a new property to an object.
+Implement a function that checks if an object is empty.
+Create an object that represents a car and includes methods to start and stop the engine.
+Write a function that returns an array of all the keys in an object.
+Create an object that includes a nested object and access its properties.
+Write a function that prints all the properties of an object.
+Write a function that deletes a property from an object.
+Implement a function that compares two objects for equality.
+
+Day 6: Advanced Functions
+Write a function that returns a closure to add a specific number to any input.
+Implement a function that takes another function as an argument and calls it with a value.
+Write a function that returns another function for calculating power using currying.
+Create a recursive function to solve the Tower of Hanoi problem.
+Write a function that uses a higher-order function to filter an array of objects by a property. Implement a function that returns the nth Fibonacci number using recursion.
+Write a function that memoizes another function to cache results for repeated inputs. Implement a function that composes two functions, applying one after the other.
+Write a function that returns the sum of all arguments passed to it using rest parameters.
+Create a function that debounces another function, limiting how often it can be called.
+
+Day 7: Asynchronous JavaScript
+Write a function that simulates a delay using setTimeout and then prints a message.
+Implement a function that fetches data from a mock API using Promises.
+Write an async function that waits for a Promise to resolve and then logs the result.
+Implement a function that retries an asynchronous operation a specified number of times.
+Write a function that executes multiple Promises in parallel and returns their results.
+Implement a function that handles an asynchronous operation with both success and failure cases.
+Write a function that uses Promise.all to fetch data from multiple sources simultaneously.
+Implement an async function that reads a file and logs its content (simulate with a delay).
+Write a function that chains Promises to perform a sequence of asynchronous tasks.
+
+Day 8: ES6+ Features
+Write a function that uses template literals to format a string with variables. Implement a function that destructures an object into individual variables. Write a function that merges two arrays using the spread operator.
+Implement a function that uses default parameters for optional arguments.
+Rewrite a function as an arrow function.
+Write a function that sums an arbitrary number of arguments using rest parameters.
+Implement an object literal that uses property shorthand for properties with the same name as variables
+Write a function that swaps the first and second elements of an array using array destructuring.
+Create a class Person with a constructor and a method that returns a greeting message.
+Write two simple ES6 modules: math.js with an add function, and main.js
+that imports and uses the add function.
+
+Day 9: Modules and Error Handling
+Write a function that parses a JSON string and handles errors using try-catch.
+Implement a function that throws an error if a value is not a number.
+Create a custom error class ValidationError that extends the built-in Error class.
+Write a function that tries to parse JSON and handles different types
+of errors in separate catch blocks.
+Implement a function that uses try-catch-finally to handle errors and clean up resources. Write an async function that catches errors from a Promise using try-catch.
+Implement a function that catches an error and re-throws it after logging a message.
+Write a function that logs errors to the console and re-throws them. Implement a function that validates user input and throws errors for invalid inputs. Write a function that handles errors gracefully, providing fallback values or messages.
+
+Day 10: Best Practices & Coding Challenges
+Refactor a given function to improve readability and maintainability.
+Write an optimized version of a function that calculates the nth Fibonacci number. Refactor a code snippet to use ES6 features like let, const, arrow functions, and template literals. Identify and refactor repeated code to follow the DRY (Don't Repeat Yourself) principle. Write a function that is organized into smaller helper functions to improve clarity. Write comments for a given function that explain the logic and purpose of the code.
+Write a simple function and its corresponding unit tests using a testing framework like Jest. Write a function that has performance issues and then optimize it using console profiling. Write a robust function with proper error handling, including input validation
+and custom error messages.
+Refactor a callback-based asynchronous function to use Promises or async/await.
