@@ -21,7 +21,20 @@
         },
       };
 
-      let user = {
+      let user1 = {
+        fName: "Usman",
+        lName: "Shafiq",
+        fullName: function () {
+          return `${this.fName} ${this.lName}`;
+        },
+        address: {
+          country: "PAK",
+          city: "Lahore",
+          zip: 5125,
+        },
+      };
+
+      let user2 = {
         fName: "Usman",
         lName: "Shafiq",
         fullName: function () {
@@ -50,84 +63,36 @@
       // console.log(user.hasOwnProperty("age")) // true
       // console.log(user.hasOwnProperty("city")) // false
 
-      //   function NestedPrint(obj) {
-      //     for (let key in obj) {
-      //       if (obj.hasOwnProperty(key)) {
-      //         if (typeof obj[key] === "object") {
-      //           console.log(`${key}:`);
-      //           NestedPrint(obj[key]);
-      //         } else if (typeof obj[key] === "function") {
-      //           const result = obj[key](); // function call
-      //           console.log(`${key}: ${result}`);
-      //         } else {
-      //           console.log(`${key}: ${obj[key]}`);
-      //         }
+      // function NestedPrint(obj) {
+      //   for (let key in obj) {
+      //       if (typeof obj[key] === "object") {
+      //         console.log(`${key}:`);
+      //         NestedPrint(obj[key]);
+      //       } else if (typeof obj[key] === "function") {
+      //         const result = obj[key](); // function call
+      //         console.log(`${key}: ${result}`);
+      //       } else {
+      //         console.log(`${key}: ${obj[key]}`);
       //       }
       //     }
-      //   }
+      // }
 
-      //   NestedPrint(user);
+      // NestedPrint(user);
       //   NestedPrint(car);
 
-      // function AllKeys(obj) {
-      //     let keys = [];
-      //     for (let key in obj) {
-      //         keys = [...keys, key]
-      //     }
-      //     return keys;
-      // }
-
-      // console.log(AllKeys(user))
-
-      //   function Dell(obj, delProp) {
-      //     for (let key in obj) {
-      //       if (obj.hasOwnProperty(key)) {
-      //         if (key === delProp) {
-      //           delete obj[key];
-      //           console.log(`${key} is deleted`);
-      //         } else if (typeof obj[key] === "object") {
-      //           Dell(obj[key], delProp);
-      //         }
+      // function Dell(obj, delProp) {
+      //   for (let key in obj) {
+      //       if (key === delProp) {
+      //         delete obj[key];
+      //         console.log(`${key} is deleted`);
+      //       } else if (typeof obj[key] === "object") {
+      //         Dell(obj[key], delProp);
       //       }
       //     }
       //   }
 
-      //   Dell(user, "zip")
-      //   console.log(user);
-
-      // function isEqual(obj1, obj2) {
-      //   // reference comparison:
-      //   // const obj1 = { a: 1 };
-      //   // const obj2 = obj1;
-      //   return obj1 === obj2;
-
-      //   // properties comparison:
-      //   // const obj1 = { a: 1, b: 2 };
-      //   // const obj2 = { x: 3, y: 4 };
-      //   return Object.keys(obj1).length === Object.keys(obj2).length;
-
-      //   // top-level values comparison:
-      //   // const obj1 = { a: 1, b: 2 };
-      //   // const obj2 = { a: 1, b: 2 };
-      //   for (let key in obj1) {
-      //     if (!obj2.hasOwnProperty(key)) {
-      //       return false;
-      //     }
-      //     if (obj1[key] !== obj2[key]) {
-      //       return false;
-      //     }
-      //   }
-
-      //   for (let key in obj2) {
-      //     if (!obj1.hasOwnProperty(key)) {
-      //       return false;
-      //     }
-      //     if (obj2[key] !== obj1[key]) {
-      //       return false;
-      //     }
-      //   }
-      //   return true;
-      // }
+      // Dell(user, "address")
+      // console.log(user);
 
       function Compare(obj1, obj2) {
         // reference comparison:
@@ -157,6 +122,26 @@
 
         return true;
       }
+
+      console.log(Compare(user1, user2))
+
+      // -------- Accessing All (main + nested) keys ------- //
+
+      // let keys = [];
+      // function AllKeys(obj) {
+      //   for (let x in obj) {
+      //     if (typeof obj[x] === "object") {
+      //       keys = [...keys, x];
+      //       AllKeys(obj[x]);
+      //     } else {
+      //       keys = [...keys, x];
+      //     }
+      //   }
+      //   return keys;
+      // }
+
+      // console.log(AllKeys(user));
+
     </script>
   </body>
 </html>

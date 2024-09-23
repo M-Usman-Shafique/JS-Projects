@@ -44,35 +44,7 @@
       //   let baseOf2 = base(2);
       //   console.log(baseOf2(3));
 
-      // ----------- Fibonacci ------------ //
-      //   function Fibonacci(n) {
-      //     if (n === 0) return 0;
-      //     if (n === 1) return 1;
-      //     if (n > 1) {
-      //       return Fibonacci(n - 1) + Fibonacci(n - 2);
-      //     } else return "invalid number"
-      //   }
-
-      //   console.log(Fibonacci(-3));
-
-      // ---------- Rest Parameters ---------- //
-      // function sum(...args) {
-      //     return args.reduce((acc, curr) => acc + curr, 0);
-      // }
-
-      // console.log(sum(2, 3, 4, 2, 4))
-
-      //   function Filter(arr, prop) {
-      //     return arr.filter((item) => item.hasOwnProperty(prop));
-      //   }
-
-      //   const arr = [
-      //     { name: "Alice", age: 25 },
-      //     { name: "Bob" },
-      //     { name: "Charlie", age: 30 },
-      //   ];
-
-      //   console.log(Filter(arr, "age"));
+      // --------------- COMPOSE ------------- //
 
       //   function compose(fn1, fn2, num) {
       //     return fn2(fn1(num));
@@ -83,22 +55,104 @@
 
       //   console.log(compose(sum, mult, 1));
 
-      function towerOfHanoi(n, source, auxiliary, target) {
-        if (n === 0) return;
+      // ------------- Tower of Hanoi ------------ //
 
-        // Move n-1 disks from source to auxiliary, so they are out of the way
-        towerOfHanoi(n - 1, source, target, auxiliary);
+      // function towerOfHanoi(n, source, auxiliary, target) {
+      //   if (n === 0) return;
 
-        // Move the nth disk from source to target
-        console.log(`Move disk ${n} from ${source} to ${target}`);
+      //   // Move n-1 disks from source to auxiliary, so they are out of the way
+      //   towerOfHanoi(n - 1, source, target, auxiliary);
 
-        // Move the n-1 disks from auxiliary to target
-        towerOfHanoi(n - 1, auxiliary, source, target);
-      }
+      //   // Move the nth disk from source to target
+      //   console.log(`Move disk ${n} from ${source} to ${target}`);
 
-      // Example usage
-      const nDisks = 3;
-      towerOfHanoi(nDisks, "A", "B", "C");
+      //   // Move the n-1 disks from auxiliary to target
+      //   towerOfHanoi(n - 1, auxiliary, source, target);
+      // }
+
+      // // Example usage
+      // const nDisks = 3;
+      // towerOfHanoi(nDisks, "A", "B", "C");
+
+      // -------- Filtering Obj By Property/Value -------- //
+
+      // let users = [
+      //   {
+      //     name: "Ali",
+      //     age: 15,
+      //     address: {
+      //       city: "LHR",
+      //       country: "PAK",
+      //       zip: 5212,
+      //     },
+      //   },
+      //   {
+      //     name: "Babar",
+      //     age: 30,
+      //     address: {
+      //       city: "KHI",
+      //       country: "PAK",
+      //       zip: 7212,
+      //     },
+      //   },
+      //   {
+      //     name: "Saqib",
+      //     age: 20,
+      //     address: {
+      //       city: "FSD",
+      //       country: "PAK",
+      //       zip: 2212,
+      //     },
+      //   },
+      // ];
+
+      // function recur(obj, prop) {
+      //   for (let x in obj) {
+      //     if (obj[x] === prop) {
+      //       return true;
+      //     } else if (typeof obj[x] === "object") {
+      //       return recur(obj[x], prop);
+      //     }
+      //   }
+      //   return false;
+      // }
+
+      // function filterByProp(arr, prop) {
+      //   let result = arr.filter((item) => {
+      //     return recur(item, prop);
+      //   });
+      //   return result;
+      // }
+
+      // console.log(filterByProp(users, "KHI"));
+
+      // --------- Filtering Obj by Key ---------- //
+
+      // const users = [
+      //   { name: "Alice", age: 25 },
+      //   { name: "Bob", address: { city: "LHR", zip: 2182 } },
+      //   { name: "Charlie", age: 20, hobby: "reading" },
+      // ];
+
+      // function recur(obj, key) {
+      //   for (let x in obj) {
+      //     if (x === key) {
+      //       return true;
+      //     } else if (typeof obj[x] === "object") {
+      //       return recur(obj[x], key);
+      //     }
+      //   }
+      //   return false;
+      // }
+
+      // function filterByKey(arr, key) {
+      //   let result = arr.filter((item) => {
+      //     return recur(item, key);
+      //   });
+      //   return result;
+      // }
+
+      // console.log(filterByKey(users, "hobby"));
     </script>
   </body>
 </html>

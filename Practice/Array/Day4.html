@@ -19,34 +19,21 @@
 
       // console.log(Flat(["a", "b", ["c", [true, "Hello"], "d"], 3, 4]))
 
-      // function Remove(element) {
-      //     let arr = [1, 2, 3, "a", true]
-      //     // for (let x in arr) {
-      //     //     if (arr[x] === element) {
-      //     //         arr.splice(x, 1)
-      //     //     }
-      //     // }
-      //     // return arr;
-      //     return arr.filter(item => item !== element);
+      // function DelDup(arr) {
+      //   let set = new Set(arr);
+      //   let ary = [...set];
+      //   return ary;
+      // for (let x in arr) {
+      //     for (let y in arr) {
+      //         if(arr[x] === arr[y] && x !== y) {
+      //             arr.splice(y, 1)
+      //         }
+      //     }
+      // }
+      // return arr;
       // }
 
-      // console.log(Remove(1))
-
-      function DelDup(arr) {
-        let set = new Set(arr);
-        let ary = [...set];
-        return ary;
-        // for (let x in arr) {
-        //     for (let y in arr) {
-        //         if(arr[x] === arr[y] && x !== y) {
-        //             arr.splice(x, 1)
-        //         }
-        //     }
-        // }
-        // return arr;
-      }
-
-      console.log(DelDup([1, 2, 2, 3, 4, 4, 4]));
+      // console.log(DelDup([1, 2, 2, 3, 4, 4, 4]));
 
       //   function Duplicate(arr) {
       //     let dup = [];
@@ -88,17 +75,31 @@
       //     let set2 = new Set(arr2)
 
       //     let intersect = [...set1].filter(item => set2.has(item))
+      // let intersection = [...set1].filter((item) => [...set2].includes(item));
       //     return intersect;
 
       //  }
 
-      //       let arr1 = [1, 3, 2, 2, 3, 4]
-      //       let arr2 = [4, 3, 2, 4, 5]
+      let arr1 = [1, 3, 2, 2, 3, 4];
+      let arr2 = [4, 3, 2, 4, 5];
       //       console.log(Intersection(arr1, arr2))
 
-      function Duplicate(arr) {
-        
-      }
+      // function dell(arr, index) {
+      //   if (index >= arr.length) return "invalid index"
+      //   arr.splice(index, 1);
+      //   return arr;
+      // }
+
+      // console.log(dell([2, 4, 6], 0))
+
+      // function dell(arr, elem) {
+      //   let index = arr.indexOf(elem);
+      //   if (index === -1) return "element dot exist"
+      //   arr.splice(index, 1);
+      //   return arr;
+      // }
+
+      // console.log(dell([2, 4, 6], 4);
     </script>
   </body>
 </html>

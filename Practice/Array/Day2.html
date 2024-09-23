@@ -59,6 +59,7 @@
 
       // function Reverse(num) {
       //   let str = num.toString();
+      // str = str.split('').reverse().join('')
       //   let reversed = "";
       //   for (let i = str.length - 1; i >= 0; i--) {
       //     reversed += str[i];
@@ -67,42 +68,25 @@
       // }
       // console.log(Reverse(12345));
 
-      // function isPrime(num) {
-      //   // Handle edge cases
-      //   if (num <= 1) return false;
-      //   if (num === 2) return true;
-      //   if (num % 2 === 0) return false;
-
-      //   for (let i = 3; i <= Math.sqrt(num); i += 2) {
-      //     if (num % i === 0) return false;
+      //   function Fibonacci(n) {
+      //     if (n === 0) return 0;
+      //     if (n === 1) return 1;
+      //     if (n > 1) {
+      //       return Fibonacci(n - 1) + Fibonacci(n - 2);
+      //     } else return "invalid number"
       //   }
 
-      //   return true;
+      //   console.log(Fibonacci(-3));
+
+      // function factorial(n) {
+      //   if (n === 0 || n === 1) return 1;
+      //   if (n < 0) return "invalid number";
+      //   else {
+      //     return n * factorial(n - 1);
+      //   }
       // }
 
-      // console.log(isPrime(4));
-
-      // function Fabonacci(n) {
-      //   if (n <= 0) return 0;
-      //   if (n === 1) return 1;
-      //   return Fabonacci(n - 1) + Fabonacci(n - 2)
-      // }
-
-      // console.log(Fabonacci(4))
-
-      //   function Factorial(n) {
-      //     if (n === 0 || n === 1) return 1;
-      //     else {
-      //         return n * Factorial(n - 1);
-      //     }
-      // }
-
-      // console.log(Factorial(2))
-
-      // function gcd(a, b) {
-      //   return b === 0 ? a : gcd(b, a % b);
-      // }
-      // console.log(gcd(6, 9));
+      // console.log(factorial(3))
 
       // function Day(num) {
       //   switch (num) {
@@ -127,21 +111,29 @@
 
       // console.log(Day(6))
 
-      // for (let i = 0; i < 5; i++) {
+      // function stars(n) {
       //   let output = "";
-      //   for (let j = 0; j <= i; j++) {
-      //     output += "*";
+      //   for (let i = 0; i < n; i++) {
+      //     for (let j = 0; j <= i; j++) {
+      //       output += "*";
+      //     }
+      //     output += "\n";
       //   }
-      //   console.log(output);
+      //   return output;
       // }
 
-      // for (let i = 5; i > 0; i--) {
+      // function stars(n) {
       //   let output = "";
-      //   for (let j = 0; j < i; j++) {
-      //     output += "*";
+      //   for (let i = n; i > 0; i--) {
+      //     for (let j = 0; j < i; j++) {
+      //       output += "*";
+      //     }
+      //     output += "\n";
       //   }
-      //   console.log(output);
+      //   return output;
       // }
+
+      // console.log(stars(7));
 
       // function Calculator(oprt, ...nums) {
       //   let operators = ["+", "-", "*", "/"];
@@ -177,6 +169,20 @@
       // const nums = numsInput.split(",").map(Number);
 
       // console.log(Calculator(oprt, ...nums));
+
+      // function isPrime(num) {
+      //   if (num <= 1) return false;
+      //   if (num === 2) return true;
+      //   if (num % 2 === 0) return false;
+
+      //   for (let i = 3; i * i <= num; i += 2) {
+      //     if (num % i === 0) return false;
+      //   }
+
+      //   return true;
+      // }
+
+      // console.log(isPrime(4));
     </script>
   </body>
 </html>
