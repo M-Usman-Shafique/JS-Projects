@@ -7,35 +7,151 @@
   </head>
   <body>
     <script>
+      // LINKED LIST
+      class List {
+        constructor(data) {
+          this.head = {
+            value: data,
+            next: null,
+          };
+          this.tail = this.head;
+          this.size = 1;
+        }
+
+        addNode(newData) {
+          let newNode = {
+            value: newData,
+            next: null,
+          };
+          this.tail.next = newNode;
+          this.tail = newNode;
+          this.size++;
+        }
+
+        traverse() {
+          let counter = 0;
+          let currentNode = this.head;
+
+          while (counter < this.size) {
+            console.log(currentNode)
+            currentNode = currentNode.next;
+            counter++;
+          }
+
+          
+        }
+      }
+
+      const newList = new List(100);
+      // console.log(newList);
+      newList.addNode(200);
+      newList.addNode(300);
+      newList.traverse();
+
+      // ================================================ //
+
+      // function chunking(arr, size) {
+      //   const chunked = [];
+      //   let index = 0;
+
+      //   while (index < arr.length) {
+      //     const chunk = arr.slice(index, index + size);
+      //     chunked.push(chunk);
+      //     index += size;
+      //   }
+
+      //   return chunked;
+      // }
+
+      // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // console.log(chunking(arr, 3));
+
+      // ‍⁡⁣⁢⁣Finding pairs whose sum is equal to a specific number:⁡
+
+      // let result = [];
+
+      // function desired(arr, num) {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     for (let j = i; j < arr.length; j++) {
+      //       let sum = arr[i] + arr[j];
+      //       if (sum === num) {
+      //         result.push([arr[i], arr[j]]);
+      //       }
+      //     }
+      //   }
+      //   return result;
+      // }
+
+      // let arr = [1, 2, 3, 4, 5];
+      // let num = 7;
+      // console.log(desired(arr, num));
+
+      // ​‌‍‌⁡⁣⁢⁣Custom "push" method:⁡​
+      // let arr = [];
+
+      // function push(elem) {
+      //   arr[arr.length] = elem;
+      //   return arr;
+      // }
+
+      // console.log(push("a"));
+      // console.log(push("hi"));
+      // console.log(push("bye"));
+
+      // ​‌‍‌⁡⁣⁢⁣custom "pop" method:⁡​
+      // let arr = [1, "a", "hello", true];
+
+      // function pop() {
+      //   arr.length--;
+      //   return arr;
+      // }
+
+      // console.log(pop())
+      // console.log(pop())
+
+      // ​‌‍‌⁡⁣⁢⁣custom "shift" method:⁡​
+      // let arr = [1, "a", "hello", true];
+
+      // function shift() {
+      //   delete arr[0];
+      //   for (let i = 0; i < arr.length; i++) {
+      //     [arr[i]] = [arr[i + 1]];
+      //   }
+      //   arr.length--;
+      //   return arr;
+      // }
+
+      // console.log(shift())
+      // console.log(shift())
 
       // ​‌‍‌⁡⁣⁢⁣RECURSIVE BINARY SEARCH:⁡​
-      function recursiveBinary(arr, target, start = 0, end = arr.length - 1) {
-        if (start > end) {
-          return -1;
-        }
+      // function recursiveBinary(arr, target, start = 0, end = arr.length - 1) {
+      //   if (start > end) {
+      //     return -1;
+      //   }
 
-        const mid = Math.floor((start + end) / 2);
+      //   const mid = Math.floor((start + end) / 2);
 
-        if (arr[mid] === target) {
-          return mid;
-        } else if (arr[mid] > target) {
-          return recursiveBinary(arr, target, start, mid - 1); // Search in the left half
-        } else {
-          return recursiveBinary(arr, target, mid + 1, end); // Search in the right half
-        }
-      }
+      //   if (arr[mid] === target) {
+      //     return mid;
+      //   } else if (arr[mid] > target) {
+      //     return recursiveBinary(arr, target, start, mid - 1); // Search in the left half
+      //   } else {
+      //     return recursiveBinary(arr, target, mid + 1, end); // Search in the right half
+      //   }
+      // }
 
-      const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const target = 5;
-      const result = recursiveBinary(sortedArray, target);
+      // const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // const target = 5;
+      // const result = recursiveBinary(sortedArray, target);
 
-      if (result !== -1) {
-        console.log(`Target found at index: ${result}`);
-      } else {
-        console.log("Target not found");
-      }
+      // if (result !== -1) {
+      //   console.log(`Target found at index: ${result}`);
+      // } else {
+      //   console.log("Target not found");
+      // }
 
-      // ​‌‍‌⁡⁣⁢⁣‍#16 ‍INSERTION & DELETION IN QUEUE USING FUNCTIONS:⁡​
+      // ​‌‍‌⁡⁣⁢⁣‍#16 ‍INSERTION & DELETION IN QUEUE:⁡​
 
       // let queue = [];
       // let size = queue.length;

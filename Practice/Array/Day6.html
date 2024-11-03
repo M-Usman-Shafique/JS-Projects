@@ -153,6 +153,25 @@
       // }
 
       // console.log(filterByKey(users, "hobby"));
+
+      let arr = [1, 2, 3, -3, 4];
+      let ary = [];
+
+      function func(arr) {
+        return arr.filter((item) => item !== -3);
+      }
+
+      console.log(func(arr))
+
+      // function terminator(arr)  {
+      //   for (let x of arr) {
+      //     if (x === -3) break;
+      //     ary = [...ary, x];
+      //   }
+      //   return ary;
+      // }
+
+      // console.log(terminator(arr))
     </script>
   </body>
 </html>

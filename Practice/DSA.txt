@@ -1,0 +1,184 @@
+DATA STRUCTURE: Way to define, store, organize & retrive data in a systemetic way.
+ALGORITHM: Steps by step procedure to execute instructions in a certain order to get the desired output.
+DSA only deals with non-premitive data types because their space complexity is dynamic while space complexity of premitive data types is constant & static.
+NON-PREMITIVE: That can store data of more than one type.
+1. ARRAYS
+2. FILES
+3. LISTS:
+a. Linear: Data items arranged in sequential order.
+  1. Array: Collection of elements, each identified by an index or key, stored next to each other.
+  2. Linked List: A linear data structure in which elements (nodes: data+ref.) are connected with each other & each elements points to its next element.
+     a. Singly: Each node contains a data element and a ref. to the next node in the sequence. Traversal is possible in only one direction, from head to tail.
+     b. Doubly: Each node contains a data element and two references: one to the next node and one to the previous node. Traversal is possible in both directions.
+     c. Circular: Last node's reference points back to the first node forming a continuous loop.
+  3. Stack: Data structure that follows the LIFO principle.
+     Uses of Stack:
+     1. Expression Evaluation
+     2. Backtracking (puzzel & maze solving) algorithms
+     3. Undo mechanism in applications.
+     4. Manage program execution (call stack)
+     Operations on Stack:
+     1. push(): adding
+     2. pop(): removing
+     3. peek(): top item
+     4. isempty()
+     5. isfull()
+  4. Queue: Data structure that follows the FIFO principle. Unlike other data structures, its both ends are open.
+  Rear: insertion end
+  Front: deletion end
+
+     Operations on Queue:
+     1. enqueue(): inserting element at rear.
+     2. dequeue(): removing element from front.
+     3. peek(): getting element from the front.
+     4. isempty()
+     5. isfull()
+     Uses of Queue:
+     1. In web servers to manage requests
+     2. Asynchronous Task Management
+     3. 
+
+b. Non-Linear:
+   1. Trees: Data structure which represents hierarchical relationships between elements.
+      Binary Tree: Each node can have two children at maximum.
+      Heap: A special type of binary tree.
+   2. Graphs: A pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by points termed as vertices, and the links that connect the vertices are called edges.
+    Common ways to Traverse a Graph:
+    1. Depth First Search (DFS)
+    2. Breadth First Search (BFS)
+
+COMMON OPERATIONS:
+1. Traversal: Accessing & Printing
+2. Insertion: Adding
+3. Deletion: Removing
+4. Searching: Finding
+5. Sorting: Arranging
+6. Merging: Joining
+
+ALGORITHM COMPLEXITY:
+1. Space (Storage/Memory): Auxiliary Space (additional) + Input Space (variables)
+2. Time (No. of lines/steps): Time complexity directly depends on no. of inputs.
+Formula: f(n) = TC
+Using Formula: f(n) = 5n² + 6n + 12
+5n²: 2 loops with 5 lines in each.
+6n: 1 loop having 6 lines.
+12: simple lines.
+Note: Always ignore the non-dominant term.
+
+ASYMPTOTIC ANALYSIS: Evaluation of an algorithm's performance in terms of space & time complexity.
+Asymptotic Notations: 
+1. Big Omega (Ω): Best case, lower bound, at least, minimum.
+Measures the performance & efficiency of an algorithm using space & time complexity.
+2. Big Theta (Θ): Avg. case, exact time.
+3. Big O: Worst case, closest upper bound, at most, maximum.
+
+COMMON COMPLEXITIES:
+1. Constant ​‌‍‌O​(1): No. of operations are independent from the size of inputs.
+Exmp#1: Finding value at a particular index of an array.
+Exmp#2: Sum of 1st & last elements of an array.
+2. Linear ​‌‍‌O​(n): No. of operations are directly dependent on the size of inputs.
+Exmp: Loop iteration on all the elements of an array or string like in searching.
+3. Quadratic ​‌‍‌O​(n²): No. of operations grow quadratically with the size of the input.
+Exmp: Nested loops like in iteration of a 2D array for sorting.
+4. Exponential ​‌‍‌O​(2ⁿ): Normally, rises due to brute force.
+Exmp: Recursion
+5. Logritmic ​‌‍‌O​(log n): No. of operations grow logrithmically with the size of the input. It's better than ​‌‍‌O​(n).
+Q: log 2⁸ = ? means 2ˣ = 8 means two to the what power equals eight?
+Ans: 3
+Exmp: Binary search where every time when loop iterates the size of input reduced half.
+Trick: When non-nested loop has increment in multiplication or division, it's always logrithmic.
+6. Linearithmic ​‌‍‌O​(nlogn): better than ​‌‍‌O​(n²)
+Exmp: Sorting
+Trick: When nested loop has increment in multiplication or division, it's linearithmic.
+7. Factorial ​‌‍‌O​(n!): worst of them all.
+
+
+
+RECURSION:
+1. Direct Recursion:
+1. Find base case: function will keep calling itself until the base case reaches.
+2. Find relation between problem & sub-problem
+3. Generalize the relation
+Exmp: Finding factorial of any number.
+Base Case: 1! & 0! = 1
+Relation: 5! = 4! * 5
+Gen.: n! = n * (n-1)!
+App.: return n * factorial(n-1);
+Indirect Recursion: Two functions calling each other inside their body.
+Exmp: let n = 1;
+      function odd() {
+        if (n <= 10) {
+          console.log(n);
+          n++;
+          even();
+        }
+      }
+      function even() {
+        if (n <= 10) {
+          console.log(n);
+          n++;
+          odd();
+        }
+      }
+      odd();
+3. Tail Recursion: When recursive call is the last thing done by the function.
+Exmp: function tail(n) {
+        if (n === 0) return;
+        else console.log(n);
+        return tail(n-1);
+      }
+      tail(3);   // output: 3 2 1
+
+4. Head Recursion: When recursive call isn't the last thing done by the function.
+Exmp:  function head(n) {
+        if (n === 0) return;
+        head(n-1);
+        console.log(n);
+      }
+      head(3);   // output: 1 2 3
+
+PATTERNS:
+1. Nested loops
+2. Outer loop for lines/rows.
+3. Inner loop for columns.
+Rules:
+1. Iterate outer loop equal to the no. of lines.
+2. Focus on columns & find a pattern, ratio or relation between rows & columns.
+3. Whatever you print (*) print inside inner loop.
+4. Print "line break" outside inner & inside outer loop.
+5. Observe symmetry [optional step].
+
+STACK (LiFO): A linear data structure in which in insertion & deletion is allowed only at the end (top) of it.
+Implementing Stack using Array: Last index treated as top.
+Queue (FiFO):
+1. Enqueue: Inserting items at start.
+The place from where we insert items or where the latest item lies is called Rear.
+2. Dequeue: Removing items from end.
+The place from where we remove items or where the oldest item lies is called Front.
+Circular Queue: Both front & rear are connected to each other.
+
+LINKED LIST: Elements are called nodes.
+Node: Value + Next (address/ref. of next node)
+Head: 1st Node
+Tail: Last Node
+Tail has "null" in the next.
+Empty Linked List: Head & Tail is same node.
+
+SEARCHING O(n):
+1. Linear: used for unsorted data. Checking one by one each element by comparing with its next element.
+2. Binary: use for sorted data. Dividing in half repeatedly:
+Steps: 1. Find middle index i.e. mid = (start+end)/2
+       2. if (arr[mid] === target) return mid
+       3. if (arr[mid] < target) repeat start = mid+1
+       4. if (arr[mid] > target) repeat star = mid-1
+
+⁡⁢⁣⁣SORTING:⁡
+⁡⁣⁣⁢1. Bubble Sort ‌O​(n²):⁡ Starting from the first index, comparing each element with its next one. If next one is lower, swap it with the previous one.
+⁡⁣⁣⁢2. Selection Sort ‌O​(n²):⁡ Finding the lowest value from unsorted elements, finding correct position for this value in the sorted elements & placing it there.
+⁡⁣⁣⁢3. Insertion Sort⁡ ⁡⁣⁣⁢‌O​(n²):⁡ Intuative approach. Randomly picking an element from unsorted elements & placing it at the correct position of sorted elements.
+⁡⁣⁣⁢4. Merge Sort⁡ ⁡⁣⁣⁢O(nlogn):⁡ Divide & Conquer. Keep dividing the array into half until 2 elements left in the sub-array. Then compare them & bring the lowest one to the start.
+⁡⁣⁣⁢5. Quick Sort ⁢O(nlogn):⁡
+a. Select a 'pivot' element.
+b. Divide the array in two sub-arrays; one with elements lower than the pivot & second with elements greater than the pivot.
+c. Put the pivot between lower & greater sub-arrays.
+d. Call this algorithm twice; one for lower & one for greater sub-array untill sub-array has one or zero elements.
