@@ -8,45 +8,6 @@
   <body>
     <script>
       // LINKED LIST
-      class List {
-        constructor(data) {
-          this.head = {
-            value: data,
-            next: null,
-          };
-          this.tail = this.head;
-          this.size = 1;
-        }
-
-        addNode(newData) {
-          let newNode = {
-            value: newData,
-            next: null,
-          };
-          this.tail.next = newNode;
-          this.tail = newNode;
-          this.size++;
-        }
-
-        traverse() {
-          let counter = 0;
-          let currentNode = this.head;
-
-          while (counter < this.size) {
-            console.log(currentNode)
-            currentNode = currentNode.next;
-            counter++;
-          }
-
-          
-        }
-      }
-
-      const newList = new List(100);
-      // console.log(newList);
-      newList.addNode(200);
-      newList.addNode(300);
-      newList.traverse();
 
       // ================================================ //
 
@@ -191,6 +152,49 @@
       //   console.log(queue);
       // }
 
+      class Queue {
+        constructor() {
+          this.items = [];
+        }
+
+        enqueue(elem) {
+          this.items.push(elem);
+        }
+
+        dequeue() {
+          return this.items.shift();
+        }
+
+        isEmpty() {
+          return this.items.length === 0;
+        }
+
+        peek() {
+          if (!this.items.isEmpty) {
+            return this.items[0];
+          }
+          return null;
+        }
+
+        size() {
+          return this.items.length;
+        }
+
+        print() {
+          console.log(this.items.toString());
+        }
+      }
+
+      const queue = new Queue();
+      console.log(queue.isEmpty());
+      queue.enqueue(1);
+      queue.enqueue(2);
+      queue.enqueue(3);
+      console.log(queue.size());
+      queue.print();
+      console.log(queue.dequeue());
+      console.log(queue.peek());
+
       // ​‌‍‌⁡⁣⁢⁣#15(c) INSERTION & DELETION IN STACK USING CLASS:⁡​
 
       // class Stack {
@@ -231,6 +235,50 @@
       // st.pop();
       // st.pop();
       // st.display();
+
+      class Stack {
+        constructor() {
+          this.items = [];
+        }
+
+        push(elem) {
+          this.items.push(elem);
+        }
+
+        pop() {
+          return this.items.pop();
+        }
+
+        isEmpty() {
+          return this.items.length === 0;
+        }
+
+        peek() {
+          if (!this.items.isEmpty) {
+            return this.items[this.items.length - 1];
+          }
+          return null;
+        }
+
+        size() {
+          return this.items.length;
+        }
+
+        print() {
+          console.log(this.items.toString());
+        }
+      }
+
+      // Example usage
+      const stack = new Stack();
+      console.log(stack.isEmpty());
+      stack.push(1);
+      stack.push(2);
+      stack.push(3);
+      console.log(stack.size());
+      stack.print();
+      console.log(stack.pop());
+      console.log(stack.peek());
 
       // ​‌‍‌⁡⁣⁢⁣#15(b) REVERSE STACK USING ANOTHER STACK:⁡​
 
