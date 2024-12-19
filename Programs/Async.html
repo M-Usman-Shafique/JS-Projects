@@ -7,231 +7,255 @@
   </head>
   <body>
     <script>
-
       // ⁡⁣⁢⁣​‌‍‌‍Async. Programming in Sync. JavaScript:⁡​
 
-          function signUp() {
-            setTimeout(() => {
-              console.log("signUp");
-            }, 3000);
-          }
+      // function signUp() {
+      //   setTimeout(() => {
+      //     console.log("signUp");
+      //   }, 3000);
+      // }
 
-          function login() {
-            setTimeout(() => {
-              console.log("login");
-            }, 2000);
-          }
+      // function login() {
+      //   setTimeout(() => {
+      //     console.log("login");
+      //   }, 2000);
+      // }
 
-          function getData() {
-            setTimeout(() => {
-              console.log("getData");
-            }, 1000);
-          }
+      // function getData() {
+      //   setTimeout(() => {
+      //     console.log("getData");
+      //   }, 1000);
+      // }
 
-          function updateData() {
-            console.log("updateData  ");
-          }
+      // function updateData() {
+      //   console.log("updateData  ");
+      // }
 
-          signUp();
-          login();
-          getData();
-          updateData();
+      // signUp();
+      // login();
+      // getData();
+      // updateData();
 
-          // ​‌‍‌⁡⁣⁢⁣Callbacks:⁡​
+      // ​‌‍‌⁡⁣⁢⁣Callbacks:⁡​
 
-          // function signUp(callback) {
-          //   setTimeout(() => {
-          //     console.log("SignUp");
-          //     callback();
-          //   }, 3000);
-          // }
+      // function signUp(callback) {
+      //   setTimeout(() => {
+      //     console.log("SignUp");
+      //     callback();
+      //   }, 3000);
+      // }
 
-          // function login(callback) {
-          //   setTimeout(() => {
-          //     console.log("Login");
-          //     callback();
-          //   }, 2000);
-          // }
+      // function login(callback) {
+      //   setTimeout(() => {
+      //     console.log("Login");
+      //     callback();
+      //   }, 2000);
+      // }
 
-          // function getData(callback ) {
-          //   setTimeout(() => {
-          //     console.log("getData");
-          //     callback();
-          //   }, 1000);
-          // }
+      // function getData(callback ) {
+      //   setTimeout(() => {
+      //     console.log("getData");
+      //     callback();
+      //   }, 1000);
+      // }
 
-          // function updateData(callback) {
-          //   console.log("UpdateData");
-          //   callback();
-          // }
+      // function updateData(callback) {
+      //   console.log("UpdateData");
+      //   callback();
+      // }
 
-          // signUp(() => {
-          //   login(() => {
-          //     getData(() => {
-          //       updateData(()=> {
-          //       console.log("All tasks are finished.");
-          //       });
-          //     });
-          //   });
-          // });
+      // signUp(() => {
+      //   login(() => {
+      //     getData(() => {
+      //       updateData(()=> {
+      //       console.log("All tasks are finished.");
+      //       });
+      //     });
+      //   });
+      // });
 
-          // ⁡⁢⁣⁢​‌‍‌Callback Hell:​⁡
+      // ⁡⁢⁣⁢​‌‍‌Problem: Callback Hell:​⁡
 
-          // function signUp(callback) {
-          //   setTimeout(() => {
-          //     console.log("SignUp");
-          //     // callback(null, 10);
-          //     callback(new Error("Error#1"), 10); // error & result
-          //   }, 3000);
-          // }
+      // function signUp(callback) {
+      //   setTimeout(() => {
+      //     console.log("SignUp");
+      //     // callback(null, 10);
+      //     callback(new Error("Error#1"), 10); // error & result
+      //   }, 3000);
+      // }
 
-          // function login(callback) {
-          //   setTimeout(() => {
-          //     console.log("Login");
-          //     callback(null, 12);
-          //     // callback(new Error("Error#2"), 12);
-          //   }, 2000);
-          // }
+      // function login(callback) {
+      //   setTimeout(() => {
+      //     console.log("Login");
+      //     callback(null, 12);
+      //     // callback(new Error("Error#2"), 12);
+      //   }, 2000);
+      // }
 
-          // function getData(callback) {
-          //   setTimeout(() => {
-          //     console.log("getData");
-          //     callback(null, 15);
-          //     // callback(new Error("Error#3"), 15);
-          //   }, 1000);
-          // }
+      // function getData(callback) {
+      //   setTimeout(() => {
+      //     console.log("getData");
+      //     callback(null, 15);
+      //     // callback(new Error("Error#3"), 15);
+      //   }, 1000);
+      // }
 
-          // function updateData(callback) {
-          //   console.log("UpdateData");
-          //   callback(null, 18);
-          //   // callback(new Error("Error#4"), 18);
-          // }
+      // function updateData(callback) {
+      //   console.log("UpdateData");
+      //   callback(null, 18);
+      //   // callback(new Error("Error#4"), 18);
+      // }
 
-          // signUp((error, result) => {
-          //   if (!error) {
-          //     login(() => {
-          //       if (!error) {
-          //         getData(() => {
-          //           if (!error) {
-          //             updateData(() => {
-          //               if (!error) {
-          //                 console.log("All tasks are finished.");
-          //               } else {
-          //                 console.error(error.message);
-          //               }
-          //             });
-          //           } else {
-          //             console.error(error.message);
-          //           }
-          //         });
-          //       } else {
-          //         console.error(error.message);
-          //       }
-          //     });
-          //   } else {
-          //     console.error(error.message); // message is a built-in property.
-          //   }
-          // });
+      // signUp((error, result) => {
+      //   if (!error) {
+      //     login(() => {
+      //       if (!error) {
+      //         getData(() => {
+      //           if (!error) {
+      //             updateData(() => {
+      //               if (!error) {
+      //                 console.log("All tasks are finished.");
+      //               } else {
+      //                 console.error(error.message);
+      //               }
+      //             });
+      //           } else {
+      //             console.error(error.message);
+      //           }
+      //         });
+      //       } else {
+      //         console.error(error.message);
+      //       }
+      //     });
+      //   } else {
+      //     console.error(error.message); // message is a built-in property.
+      //   }
+      // });
 
-          // ⁡⁣⁢⁣​‌‍‌Promises:​⁡
+      // ⁡⁣⁢⁣​‌‍‌Solution: Promises:​⁡
 
-        // function signUp() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("SignUp");
-        //       resolve();
-        //       // reject(new Error("SignUp failed."));
-        //     }, 3000);
-        //   });
-        // }
+      function signUp() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("SignUp");
+            resolve();
+            // reject(new Error("SignUp failed."));
+          }, 3000);
+        });
+      }
 
-        // function login() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("Login");
-        //       resolve();
-        //       // reject(new Error("Login failed."));
-        //     }, 2000);
-        //   });
-        // }
+      function login() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Login");
+            resolve();
+            // reject(new Error("Login failed."));
+          }, 2000);
+        });
+      }
 
-        // function getData() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("getData");
-        //       resolve();
-        //       // reject(new Error("getData not fulfilled."));
-        //     }, 1000);
-        //   });
-        // }
-        // function updateData() {
-        //   return new Promise((resolve, reject) => {
-        //     console.log("UpdateData");
-        //     resolve("All tasks are finished.");
-        //     // reject(new Error("UpdateData not fulfilled."));
-        //   });
-        // }
+      function getData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("getData");
+            resolve();
+            // reject(new Error("getData not fulfilled."));
+          }, 1000);
+        });
+      }
+      function updateData() {
+        return new Promise((resolve, reject) => {
+          console.log("UpdateData");
+          resolve("All tasks are finished.");
+          // reject(new Error("UpdateData not fulfilled."));
+        });
+      }
 
-        // signUp()
-        //   .then(login)
-        //   .then(getData)
-        //   .then(updateData)
-        //   .then((result) => console.log(result))
-        //   .catch((error) => console.error(error.message));
+      // signUp()
+      //   .then(login)
+      //   .then(getData)
+      //   .then(updateData)
+      //   .then((result) => console.log(result))
+      //   .catch((error) => console.error(error.message));
 
-        // ⁡⁢⁣⁢​‌‍‌Promise Chaining​⁡.
+      // ⁡⁢⁣⁢​‌‍‌Problem: Promise Chaining​⁡ (Nested Promises )
 
-        // ⁡⁣⁢⁣​‌‍‌Async. Await:​⁡
+      // ⁡⁣⁢⁣​‌‍‌Solution: Async. Await:​⁡
 
-        // function signUp() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("SignUp");
-        //       resolve();
-        //       // reject(new Error("SignUp failed."))
-        //     }, 3000);
-        //   });
-        // }
+      // async function AsyncAwait() {
+      //   try {
+      //     await signUp();
+      //     await login();
+      //     await getData();
+      //     let message = await updateData();
+      //     console.log(message);
+      //   } catch (error) {
+      //     console.error(error.message);
+      //   }
+      // }
+      // AsyncAwait();
 
-        // function login() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("Login");
-        //       resolve();
-        //       // reject(new Error("Login failed."));
-        //     }, 2000);
-        //   });
-        // }
+      // ​‌‍‌⁡⁣⁢⁡⁢⁡⁣⁢⁡⁢⁣⁢Parallel Promises:​
 
-        // function getData() {
-        //   return new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //       console.log("Get Data");
-        //       resolve();
-        //       // reject(new Error("getData not fulfilled."))
-        //     }, 1000);
-        //   });
-        // }
-        // function updateData() {
-        //   return new Promise((resolve, reject) => {
-        //     console.log("Update Data");
-        //     resolve("All tasks are finished finished.");
-        //     // reject(new Error("Update not fulfilled."))
-        //   });
-        // }
+      // let prom1 = new Promise((resolve, reject) => {
+      //   console.log("Promise#1 is pending...");
+      //   setTimeout(() => {
+      //     resolve("Promise#1 is fulfilled...");
+      //   }, 2000);
+      // });
 
-        // async function AsyncAwait() {
-        //   try {
-        //     await signUp();
-        //     await login();
-        //     await getData();
-        //     let message = await updateData();
-        //     console.log(message);
-        //   } catch(error) {
-        //     console.error(error.message);
-        //   }
-        // }
-        // AsyncAwait();
+      // let prom2 = new Promise((resolve, reject) => {
+      //   console.log("Promise#2 is pending...");
+      //   setTimeout(() => {
+      //     // resolve("Promise#2 is fulfilled...");
+      //     reject(new Error("Promise#2 is cancelled..."));
+      //   }, 3000);
+      // });
+
+      // let prom3 = new Promise((resolve, reject) => {
+      //   console.log("Promise#3 is pending...");
+      //   setTimeout(() => {
+      //     resolve("Promise#3 is fulfilled...");
+      //   }, 4000);
+      // });
+
+      // prom1.then((value) => {
+      //   console.log(value);
+      // });
+
+      // prom2.then((value) => {
+      //   console.log(value);
+      // });
+
+      // prom3.then((value) => {
+      //   console.log(value);
+      // });
+
+      // ​‌‌‍⁡⁣⁢⁡⁣⁢⁣​‌‍‌Solution: Promise All:​⁡
+
+      // let allPromises = Promise.all([prom1, prom2, prom3]);
+
+      // allPromises
+      //   .then((value) => {
+      //     console.log(value);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error.message);
+      //   });
+
+      // ​‌‍‌⁡⁢⁣⁢Problem:⁡​ ⁡⁢⁣⁡⁢⁣⁡⁢⁣⁢Promise.all works only if all promises are resolved and none of them is rejected.⁡
+
+      // ​‌‍‌⁡⁣⁢⁣Solution: Promise All Setteled⁡​
+
+      // let allSetteledPromises = Promise.allSettled([prom1, prom2, prom3]);
+
+      // allSetteledPromises
+      //   .then((value) => {
+      //     console.log(value);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error.message);
+      //   });
     </script>
   </body>
 </html>
